@@ -6,6 +6,7 @@ import { GoogleGenAI } from '@google/genai';
 import { fileURLToPath } from 'url';
 
 dotenv.config();
+const isVercel = !!process.env.VERCEL;
 
 // Penanganan Environment ES Module untuk __dirname & __filename
 const __filename = fileURLToPath(import.meta.url);
