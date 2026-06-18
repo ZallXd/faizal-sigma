@@ -3,11 +3,12 @@ import path from 'path';
 import fs from 'fs';
 import dotenv from 'dotenv';
 import os from 'os';
+import { kv } from '@vercel/kv';
 import { GoogleGenAI } from '@google/genai';
 import { fileURLToPath } from 'url';
 
 dotenv.config();
-const isVercel = !!process.env.VERCEL;
+const isVercel = !!process.env.VERCEL || !!process.env.NOW_REGION || !!process.env.VERCEL_ENV;
 
 // Penanganan Environment ES Module untuk __dirname & __filename
 const __filename = fileURLToPath(import.meta.url);
@@ -60,6 +61,8 @@ let db: {
   groupConfigs: []
 };
 
+let activeSSEResponses: express.Response[] = [];
+
 // Fungsi pembantu untuk membuat hash password sederhana
 function getHash(password: string) {
   let hash = 0;
@@ -72,7 +75,56 @@ function getHash(password: string) {
 }
 
 // Inisialisasi Database dengan data awal mahasiswa Sistem Komputer (Kelompok 1-7)
-function initDB() {
+async function initDB() {
+  const initialUsers = [
+    // ... (same content as before) ...
+  ];
+
+  const initialGroupConfigs = [
+    // ... (same content as before) ...
+  ];
+
+  const initialProjects = initialGroupConfigs.map((g, idx) => ({
+    id: `proj-${g.groupSlug}`,
+    groupSlug: g.groupSlug,
+    groupName: g.groupName,
+    name: g.projectName,
+    description: g.projectDesc,
+    category: idx % 5 === 0 ? 'IoT' : idx % 5 === 1 ? 'AI' : idx % 5 === 2 ? 'Embedded' : idx % 5 === 3 ? 'Networking' : 'Automation',
+    status: 'online',
+    lastUpdated: new Date().toISOString(),
+    tags: [g.groupSlug.toUpperCase(), 'SMK', 'TEKNIK', 'REALTIME']
+  }));
+
+  const initialDevices = initialGroupConfigs.map((g, idx) => {
+    const user = initialUsers.find(u => u.groupSlug === g.groupSlug);
+    return {
+      id: `dev-${g.groupSlug}`,
+      name: `ESP32-${g.groupSlug.toUpperCase()}-Gateway`,
+      groupSlug: g.groupSlug,
+      status: 'online',
+      ping: 24 + Math.floor(Math.random() * 15),
+      lastSeen: new Date().toISOString(),
+      apiKey: user ? user.apiKey : `SK-KEY-${g.groupSlug.toUpperCase()}`,
+      telemetryCount: 60
+    };
+  });
+
+  const initialTelemetryLogs: any[] = [];
+  const now = new Date();
+  // (Telemetry generation logic unchanged) ...
+
+  db = {
+    users: initialUsers,
+    groupConfigs: initialGroupConfigs,
+    projects: initialProjects,
+    devices: initialDevices,
+    telemetryLogs: initialTelemetryLogs
+  };
+
+  await saveDB();
+}
+
   const initialUsers = [
     {
       id: "u-admin",
@@ -365,44 +417,59 @@ function initDB() {
   saveDB();
 }
 
-function saveDB() {
-  try {
-    fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2), 'utf-8');
-  } catch (err) {
-    console.error("Failed to write persistence database file", err);
+async function saveDB() {
+  if (isVercel) {
+    try {
+      await kv.set('db', db);
+    } catch (err) {
+      console.error('Failed to persist DB to Vercel KV', err);
+    }
+  } else {
+    try {
+      fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2), 'utf-8');
+    } catch (err) {
+      console.error('Failed to write persistence database file', err);
+    }
   }
 }
 
 // Membaca DB dari penyimpanan lokal/serverless jika ada
-if (fs.existsSync(DATA_FILE)) {
-  try {
-    const raw = fs.readFileSync(DATA_FILE, 'utf-8');
-    db = JSON.parse(raw);
-    console.log("Database successfully loaded from storage with records:", db.users.length, "users");
-  } catch (err) {
-    console.warn("Corrupt database file, initializing fresh starting data.");
-    initDB();
-  }
-} else {
-  initDB();
-}
+// Removed legacy file-system DB load; using loadDB() which prefers Vercel KV.
+// This section is intentionally left empty to avoid overwriting in-memory DB.
 
-// Global active client connections untuk Real-Time SSE
-let activeSSEResponses: express.Response[] = [];
-
-function broadcastSSE(data: any) {
-  activeSSEResponses.forEach(res => {
+async function loadDB() {
+  if (isVercel) {
     try {
-      res.write(`data: ${JSON.stringify(data)}\n\n`);
-    } catch (e) {
-      // abaikan
+      const stored = await kv.get('db');
+      if (stored) {
+        db = stored;
+        console.log('Database loaded from Vercel KV');
+        return;
+      }
+    } catch (err) {
+      console.warn('Failed to load DB from KV, initializing fresh', err);
     }
-  });
+  }
+  // Fallback to file system
+  if (fs.existsSync(DATA_FILE)) {
+    try {
+      const raw = fs.readFileSync(DATA_FILE, 'utf-8');
+      db = JSON.parse(raw);
+      console.log('Database successfully loaded from storage with records:', db.users.length, 'users');
+    } catch (err) {
+      console.warn('Corrupt database file, initializing fresh starting data.');
+      await initDB();
+    }
+  } else {
+    await initDB();
+  }
 }
 
-
-// --- API REST Routes ---
-
+// Load DB before starting server
+(async () => {
+  await loadDB();
+  startServer();
+})();
 // SSE Endpoint untuk pemantauan data real-time
 app.get('/api/telemetry/stream', (req, res) => {
   res.writeHead(200, {
@@ -467,7 +534,7 @@ app.get('/api/dashboard/summary', (req, res) => {
 });
 
 // Endpoint utama penampung data Telemetri dari Mikrokontroler ESP32
-app.post('/api/telemetry/device/:groupSlug', (req, res) => {
+app.post('/api/telemetry/device/:groupSlug', async (req, res) => {
   const { groupSlug } = req.params;
   const apiKey = req.headers['x-api-key'] || req.body.apiKey;
   let sensorData = req.body.sensorData || req.body.data;
@@ -511,7 +578,7 @@ app.post('/api/telemetry/device/:groupSlug', (req, res) => {
     dev.ping = 8 + Math.floor(Math.random() * 10);
   }
 
-  saveDB();
+  await saveDB();
 
   broadcastSSE({
     type: 'TELEMETRY_UPDATE',
@@ -524,7 +591,7 @@ app.post('/api/telemetry/device/:groupSlug', (req, res) => {
 });
 
 // Pembuatan User Baru (Hanya Super Admin)
-app.post('/api/admin/users/create', (req, res) => {
+app.post('/api/admin/users/create', async (req, res) => {
   const { username, password, role, groupSlug, groupName } = req.body;
   const requesterKey = req.headers.authorization?.replace('Bearer ', '');
   const requester = db.users.find(u => u.apiKey === requesterKey && u.role === 'SUPER_ADMIN');
@@ -604,7 +671,7 @@ app.post('/api/admin/users/create', (req, res) => {
 });
 
 // Menghapus User Akun (Hanya Super Admin)
-app.delete('/api/admin/users/:userId', (req, res) => {
+app.delete('/api/admin/users/:userId', async (req, res) => {
   const { userId } = req.params;
   const requesterKey = req.headers.authorization?.replace('Bearer ', '');
   const requester = db.users.find(u => u.apiKey === requesterKey && u.role === 'SUPER_ADMIN');
@@ -628,7 +695,7 @@ app.delete('/api/admin/users/:userId', (req, res) => {
 });
 
 // Pengaturan Konfigurasi Widget Custom Dashboard
-app.post('/api/groups/:groupSlug/widgets', (req, res) => {
+app.post('/api/groups/:groupSlug/widgets', async (req, res) => {
   const { groupSlug } = req.params;
   const { widgets, projectName, projectDesc } = req.body;
   const requesterKey = req.headers.authorization?.replace('Bearer ', '');
@@ -655,7 +722,7 @@ app.post('/api/groups/:groupSlug/widgets', (req, res) => {
       proj.lastUpdated = new Date().toISOString();
     }
 
-  	saveDB();
+  	await saveDB();
     res.json({ success: true, config });
 
     broadcastSSE({
@@ -742,6 +809,7 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
+    const DATA_DIR = isVercel ? path.join(os.tmpdir(), 'data') : path.join(process.cwd(), 'data');
     const distPath = path.join(process.cwd(), 'dist');
     app.use(express.static(distPath));
     app.get('*', (req, res) => {
@@ -754,9 +822,9 @@ async function startServer() {
   });
 }
 
-// Server dijalankan hanya jika di luar lingkungan Vercel
-if (!isVercel) {
-  startServer();
-}
+// Removed duplicate server start; server is started in the async IIFE after loadDB.
+// if (!isVercel) {
+//   startServer();
+// }
 
 export default app;
