@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import fs from 'fs';
 import dotenv from 'dotenv';
+import os from 'os';
 import { GoogleGenAI } from '@google/genai';
 import { fileURLToPath } from 'url';
 
@@ -16,7 +17,7 @@ const app = express();
 const PORT = 3000;
 app.use(express.json());
 
-const DATA_DIR = path.join(process.cwd(), 'data');
+const DATA_DIR = isVercel ? path.join(os.tmpdir(), 'data') : path.join(process.cwd(), 'data');
 const DATA_FILE = path.join(DATA_DIR, 'db.json');
 
 // Memastikan direktori data tersedia
