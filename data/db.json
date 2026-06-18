@@ -1,0 +1,5052 @@
+{
+  "users": [
+    {
+      "id": "u-admin",
+      "username": "admin",
+      "passwordHash": "HASH_39c43b7d",
+      "role": "SUPER_ADMIN",
+      "groupSlug": "all",
+      "groupName": "Super Administrator",
+      "apiKey": "SK-KEY-ADMIN-SUPER-99",
+      "deviceToken": "TOKEN-ADMIN-00",
+      "createdAt": "2026-05-29T09:49:18.916Z"
+    },
+    {
+      "id": "u-ahmad",
+      "username": "ahmad.faizal4307@smk.belajar.id",
+      "passwordHash": "HASH_39c43b7d",
+      "role": "SUPER_ADMIN",
+      "groupSlug": "all",
+      "groupName": "Ketua Jurusan Sistem Komputer",
+      "apiKey": "SK-KEY-AHMAD-SUPER-88",
+      "deviceToken": "TOKEN-AHMAD-01",
+      "createdAt": "2026-05-29T09:49:18.916Z"
+    },
+    {
+      "id": "u-g1",
+      "username": "kelompok1",
+      "passwordHash": "HASH_2f366b7f",
+      "role": "USER",
+      "groupSlug": "group-1",
+      "groupName": "Kelompok 1",
+      "apiKey": "SK-KEY-G1-9874",
+      "deviceToken": "TOKEN-G1-IOT-AGRI",
+      "createdAt": "2026-05-29T09:49:18.916Z"
+    },
+    {
+      "id": "u-g2",
+      "username": "kelompok2",
+      "passwordHash": "HASH_2f366b7f",
+      "role": "USER",
+      "groupSlug": "group-2",
+      "groupName": "Kelompok 2",
+      "apiKey": "SK-KEY-G2-1143",
+      "deviceToken": "TOKEN-G2-IOT-GAS",
+      "createdAt": "2026-05-29T09:49:18.916Z"
+    },
+    {
+      "id": "u-g3",
+      "username": "kelompok3",
+      "passwordHash": "HASH_2f366b7f",
+      "role": "USER",
+      "groupSlug": "group-3",
+      "groupName": "Kelompok 3",
+      "apiKey": "SK-KEY-G3-5521",
+      "deviceToken": "TOKEN-G3-EMBED-ROBOT",
+      "createdAt": "2026-05-29T09:49:18.916Z"
+    },
+    {
+      "id": "u-g4",
+      "username": "kelompok4",
+      "passwordHash": "HASH_2f366b7f",
+      "role": "USER",
+      "groupSlug": "group-4",
+      "groupName": "Kelompok 4",
+      "apiKey": "SK-KEY-G4-3669",
+      "deviceToken": "TOKEN-G4-POWER-GRID",
+      "createdAt": "2026-05-29T09:49:18.916Z"
+    },
+    {
+      "id": "u-g5",
+      "username": "kelompok5",
+      "passwordHash": "HASH_2f366b7f",
+      "role": "USER",
+      "groupSlug": "group-5",
+      "groupName": "Kelompok 5",
+      "apiKey": "SK-KEY-G5-2248",
+      "deviceToken": "TOKEN-G5-AQUAPONICS",
+      "createdAt": "2026-05-29T09:49:18.916Z"
+    },
+    {
+      "id": "u-g6",
+      "username": "kelompok6",
+      "passwordHash": "HASH_2f366b7f",
+      "role": "USER",
+      "groupSlug": "group-6",
+      "groupName": "Kelompok 6",
+      "apiKey": "SK-KEY-G6-8104",
+      "deviceToken": "TOKEN-G6-DRONE-SPEC",
+      "createdAt": "2026-05-29T09:49:18.916Z"
+    },
+    {
+      "id": "u-g7",
+      "username": "kelompok7",
+      "passwordHash": "HASH_2f366b7f",
+      "role": "USER",
+      "groupSlug": "group-7",
+      "groupName": "Kelompok 7",
+      "apiKey": "SK-KEY-G7-7740",
+      "deviceToken": "TOKEN-G7-TRAFFIC-CITY",
+      "createdAt": "2026-05-29T09:49:18.916Z"
+    }
+  ],
+  "groupConfigs": [
+    {
+      "groupSlug": "group-1",
+      "groupName": "Kelompok 1",
+      "projectName": "Smart Agriculture & Soil Telemetry",
+      "projectDesc": "Sistem otomasi nutrisi dan pemantauan kelembapan tanah greenhouse jarak jauh berpresisi tinggi berbasis ESP32.",
+      "widgets": [
+        {
+          "id": "g1-w1",
+          "type": "line_chart",
+          "title": "Kelembaban Tanah",
+          "sensorKey": "soil_moisture",
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "color": "#10b981"
+        },
+        {
+          "id": "g1-w2",
+          "type": "gauge",
+          "title": "Suhu Indoor",
+          "sensorKey": "temperature",
+          "unit": "°C",
+          "min": 10,
+          "max": 50,
+          "color": "#ef4444"
+        },
+        {
+          "id": "g1-w3",
+          "type": "realtime_card",
+          "title": "Kelembaban Udara",
+          "sensorKey": "air_humidity",
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "color": "#3b82f6"
+        },
+        {
+          "id": "g1-w4",
+          "type": "gauge",
+          "title": "Suhu Tanah",
+          "sensorKey": "soil_temperature",
+          "unit": "°C",
+          "min": 10,
+          "max": 50,
+          "color": "#f59e0b"
+        },
+        {
+          "id": "g1-w5",
+          "type": "realtime_card",
+          "title": "Sensor Hujan",
+          "sensorKey": "rain_sensor",
+          "unit": "raw",
+          "min": 0,
+          "max": 4095,
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "g1-w6",
+          "type": "log_telemetry",
+          "title": "Telemetry Feed Logs",
+          "sensorKey": "*",
+          "unit": "",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    {
+      "groupSlug": "group-2",
+      "groupName": "Kelompok 2",
+      "projectName": "AI-Powered Gas Leakage & Air Quality System",
+      "projectDesc": "Pusat monitoring polusi gas berbahaya (Methane, CO2) dengan klasifikasi anomali AI terintegrasi di laboratorium.",
+      "widgets": [
+        {
+          "id": "g2-w1",
+          "type": "line_chart",
+          "title": "Kadar Gas CO2",
+          "sensorKey": "co2",
+          "unit": "ppm",
+          "min": 300,
+          "max": 2000,
+          "color": "#f59e0b"
+        },
+        {
+          "id": "g2-w2",
+          "type": "gauge",
+          "title": "Kadar Gas Metana",
+          "sensorKey": "methane",
+          "unit": "ppm",
+          "min": 0,
+          "max": 1000,
+          "color": "#eab308"
+        },
+        {
+          "id": "g2-w3",
+          "type": "status_indicator",
+          "title": "Status Alarm Bahaya",
+          "sensorKey": "gas_leak",
+          "unit": "safe_warning",
+          "min": 0,
+          "max": 1,
+          "color": "#ef4444"
+        },
+        {
+          "id": "g2-w4",
+          "type": "log_telemetry",
+          "title": "Gas Logs",
+          "sensorKey": "*",
+          "unit": "",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    {
+      "groupSlug": "group-3",
+      "groupName": "Kelompok 3",
+      "projectName": "Autonomous Embedded Robotic Arm",
+      "projectDesc": "Robotic arm 4-Axis berbasis servo presisi tinggi dengan control telemetry penyeimbang motor.",
+      "widgets": [
+        {
+          "id": "g3-w1",
+          "type": "bar_chart",
+          "title": "Sudut Servo Motor",
+          "sensorKey": "servo_angle",
+          "unit": "deg",
+          "min": 0,
+          "max": 180,
+          "color": "#ec4899"
+        },
+        {
+          "id": "g3-w2",
+          "type": "realtime_card",
+          "title": "Arus Motor Listrik",
+          "sensorKey": "servo_current",
+          "unit": "mA",
+          "min": 0,
+          "max": 1000,
+          "color": "#22c55e"
+        },
+        {
+          "id": "g3-w3",
+          "type": "status_indicator",
+          "title": "State Automation Calibrator",
+          "sensorKey": "calibration_state",
+          "unit": "status",
+          "min": 0,
+          "max": 3,
+          "color": "#6366f1"
+        },
+        {
+          "id": "g3-w4",
+          "type": "log_telemetry",
+          "title": "Robot System Signals",
+          "sensorKey": "*",
+          "unit": "",
+          "min": 0,
+          "max": 0
+        }
+      ]
+    },
+    {
+      "groupSlug": "group-4",
+      "groupName": "Kelompok 4",
+      "projectName": "Smart Electrical Grid Monitor",
+      "projectDesc": "Smart grid telemetry system yang memonitor konsumsi energi gedung, daya, tegangan, dan faktor daya waktu nyata.",
+      "widgets": [
+        {
+          "id": "g4-w1",
+          "type": "line_chart",
+          "title": "Volatilitas Tegangan Line",
+          "sensorKey": "line_voltage",
+          "unit": "Volt",
+          "min": 190,
+          "max": 250,
+          "color": "#f59e0b"
+        },
+        {
+          "id": "g4-w2",
+          "type": "line_chart",
+          "title": "Daya Konsumsi Watts",
+          "sensorKey": "power_load",
+          "unit": "Watt",
+          "min": 0,
+          "max": 3500,
+          "color": "#ef4444"
+        },
+        {
+          "id": "g4-w3",
+          "type": "realtime_card",
+          "title": "Arus Beban",
+          "sensorKey": "current_load",
+          "unit": "Ampere",
+          "min": 0,
+          "max": 15,
+          "color": "#3b82f6"
+        },
+        {
+          "id": "g4-w4",
+          "type": "gauge",
+          "title": "Grid Power Factor",
+          "sensorKey": "power_factor",
+          "unit": "pf",
+          "min": 0,
+          "max": 1,
+          "color": "#8b5cf6"
+        }
+      ]
+    },
+    {
+      "groupSlug": "group-5",
+      "groupName": "Kelompok 5",
+      "projectName": "Aquaponics IoT Smart Controller",
+      "projectDesc": "Sistem kendali pH air kolam, pemberi pakan otomatis, dan sirkulasi air cerdas terintegrasi sensor turbidity.",
+      "widgets": [
+        {
+          "id": "g5-w1",
+          "type": "gauge",
+          "title": "Tingkat Keasaman pH",
+          "sensorKey": "water_ph",
+          "unit": "pH",
+          "min": 0,
+          "max": 14,
+          "color": "#06b6d4"
+        },
+        {
+          "id": "g5-w2",
+          "type": "line_chart",
+          "title": "Suhu Air Kolam",
+          "sensorKey": "water_temp",
+          "unit": "°C",
+          "min": 15,
+          "max": 40,
+          "color": "#3b82f6"
+        },
+        {
+          "id": "g5-w3",
+          "type": "status_indicator",
+          "title": "Status Pakan Otomatis",
+          "sensorKey": "feeder_triggered",
+          "unit": "triggered",
+          "min": 0,
+          "max": 1,
+          "color": "#10b981"
+        },
+        {
+          "id": "g5-w4",
+          "type": "realtime_card",
+          "title": "Kekeruhan Air (Turbidity)",
+          "sensorKey": "turbidity",
+          "unit": "NTU",
+          "min": 0,
+          "max": 500,
+          "color": "#f59e0b"
+        }
+      ]
+    },
+    {
+      "groupSlug": "group-6",
+      "groupName": "Kelompok 6",
+      "projectName": "Unmanned Environmental Drone Telemetry",
+      "projectDesc": "Payload telemetry sensor cuaca (tekanan udara, ketinggian, kelembapan) pada robot drone inspeksi.",
+      "widgets": [
+        {
+          "id": "g6-w1",
+          "type": "line_chart",
+          "title": "Ketinggian Terbang (Altimeter)",
+          "sensorKey": "altitude",
+          "unit": "meter",
+          "min": 0,
+          "max": 200,
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "g6-w2",
+          "type": "gauge",
+          "title": "Daya Baterai Telemetry",
+          "sensorKey": "battery_volt",
+          "unit": "%",
+          "min": 0,
+          "max": 100,
+          "color": "#ef4444"
+        },
+        {
+          "id": "g6-w3",
+          "type": "realtime_card",
+          "title": "Temperatur Udara Drone",
+          "sensorKey": "air_temp",
+          "unit": "°C",
+          "min": 0,
+          "max": 50,
+          "color": "#10b981"
+        },
+        {
+          "id": "g6-w4",
+          "type": "status_indicator",
+          "title": "Sinyal GPS Lock",
+          "sensorKey": "gps_lock",
+          "unit": "lock",
+          "min": 0,
+          "max": 1,
+          "color": "#3b82f6"
+        }
+      ]
+    },
+    {
+      "groupSlug": "group-7",
+      "groupName": "Kelompok 7",
+      "projectName": "Smart City Crowd Sensing & Lighting System",
+      "projectDesc": "Penerangan jalan otomatis responsif berbasis korelasi volume kendaraan lewat dan intensitas ambien cahaya.",
+      "widgets": [
+        {
+          "id": "g7-w1",
+          "type": "bar_chart",
+          "title": "Volume Kendaraan per Menit",
+          "sensorKey": "traffic_count",
+          "unit": "unit",
+          "min": 0,
+          "max": 60,
+          "color": "#10b981"
+        },
+        {
+          "id": "g7-w2",
+          "type": "line_chart",
+          "title": "Intensitas Cahaya (LDR)",
+          "sensorKey": "lux",
+          "unit": "Lux",
+          "min": 0,
+          "max": 1000,
+          "color": "#eab308"
+        },
+        {
+          "id": "g7-w3",
+          "type": "status_indicator",
+          "title": "Daya Lampu Pintar",
+          "sensorKey": "street_light",
+          "unit": "on_off",
+          "min": 0,
+          "max": 1,
+          "color": "#6366f1"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-group-1",
+      "groupSlug": "group-1",
+      "groupName": "Kelompok 1",
+      "name": "Smart Agriculture & Soil Telemetry",
+      "description": "Sistem otomasi nutrisi dan pemantauan kelembapan tanah greenhouse jarak jauh berpresisi tinggi berbasis ESP32.",
+      "category": "IoT",
+      "status": "online",
+      "lastUpdated": "2026-05-29T09:49:18.916Z",
+      "tags": [
+        "GROUP-1",
+        "SMK",
+        "TEKNIK",
+        "REALTIME"
+      ]
+    },
+    {
+      "id": "proj-group-2",
+      "groupSlug": "group-2",
+      "groupName": "Kelompok 2",
+      "name": "AI-Powered Gas Leakage & Air Quality System",
+      "description": "Pusat monitoring polusi gas berbahaya (Methane, CO2) dengan klasifikasi anomali AI terintegrasi di laboratorium.",
+      "category": "AI",
+      "status": "online",
+      "lastUpdated": "2026-05-29T09:49:18.916Z",
+      "tags": [
+        "GROUP-2",
+        "SMK",
+        "TEKNIK",
+        "REALTIME"
+      ]
+    },
+    {
+      "id": "proj-group-3",
+      "groupSlug": "group-3",
+      "groupName": "Kelompok 3",
+      "name": "Autonomous Embedded Robotic Arm",
+      "description": "Robotic arm 4-Axis berbasis servo presisi tinggi dengan control telemetry penyeimbang motor.",
+      "category": "Embedded",
+      "status": "online",
+      "lastUpdated": "2026-05-29T09:49:18.916Z",
+      "tags": [
+        "GROUP-3",
+        "SMK",
+        "TEKNIK",
+        "REALTIME"
+      ]
+    },
+    {
+      "id": "proj-group-4",
+      "groupSlug": "group-4",
+      "groupName": "Kelompok 4",
+      "name": "Smart Electrical Grid Monitor",
+      "description": "Smart grid telemetry system yang memonitor konsumsi energi gedung, daya, tegangan, dan faktor daya waktu nyata.",
+      "category": "Networking",
+      "status": "online",
+      "lastUpdated": "2026-05-29T09:49:18.916Z",
+      "tags": [
+        "GROUP-4",
+        "SMK",
+        "TEKNIK",
+        "REALTIME"
+      ]
+    },
+    {
+      "id": "proj-group-5",
+      "groupSlug": "group-5",
+      "groupName": "Kelompok 5",
+      "name": "Aquaponics IoT Smart Controller",
+      "description": "Sistem kendali pH air kolam, pemberi pakan otomatis, dan sirkulasi air cerdas terintegrasi sensor turbidity.",
+      "category": "Automation",
+      "status": "online",
+      "lastUpdated": "2026-05-29T09:49:18.916Z",
+      "tags": [
+        "GROUP-5",
+        "SMK",
+        "TEKNIK",
+        "REALTIME"
+      ]
+    },
+    {
+      "id": "proj-group-6",
+      "groupSlug": "group-6",
+      "groupName": "Kelompok 6",
+      "name": "Unmanned Environmental Drone Telemetry",
+      "description": "Payload telemetry sensor cuaca (tekanan udara, ketinggian, kelembapan) pada robot drone inspeksi.",
+      "category": "IoT",
+      "status": "online",
+      "lastUpdated": "2026-05-29T09:49:18.916Z",
+      "tags": [
+        "GROUP-6",
+        "SMK",
+        "TEKNIK",
+        "REALTIME"
+      ]
+    },
+    {
+      "id": "proj-group-7",
+      "groupSlug": "group-7",
+      "groupName": "Kelompok 7",
+      "name": "Smart City Crowd Sensing & Lighting System",
+      "description": "Penerangan jalan otomatis responsif berbasis korelasi volume kendaraan lewat dan intensitas ambien cahaya.",
+      "category": "AI",
+      "status": "online",
+      "lastUpdated": "2026-05-29T09:49:18.916Z",
+      "tags": [
+        "GROUP-7",
+        "SMK",
+        "TEKNIK",
+        "REALTIME"
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "id": "dev-group-1",
+      "name": "ESP32-GROUP-1-Gateway",
+      "groupSlug": "group-1",
+      "status": "online",
+      "ping": 9,
+      "lastSeen": "2026-06-14T12:09:43.795Z",
+      "apiKey": "SK-KEY-G1-9874",
+      "telemetryCount": 551
+    },
+    {
+      "id": "dev-group-2",
+      "name": "ESP32-GROUP-2-Gateway",
+      "groupSlug": "group-2",
+      "status": "online",
+      "ping": 22,
+      "lastSeen": "2026-05-30T11:59:37.617Z",
+      "apiKey": "SK-KEY-G2-1143",
+      "telemetryCount": 393
+    },
+    {
+      "id": "dev-group-3",
+      "name": "ESP32-GROUP-3-Gateway",
+      "groupSlug": "group-3",
+      "status": "online",
+      "ping": 21,
+      "lastSeen": "2026-05-30T11:59:47.632Z",
+      "apiKey": "SK-KEY-G3-5521",
+      "telemetryCount": 454
+    },
+    {
+      "id": "dev-group-4",
+      "name": "ESP32-GROUP-4-Gateway",
+      "groupSlug": "group-4",
+      "status": "online",
+      "ping": 20,
+      "lastSeen": "2026-05-30T11:58:22.494Z",
+      "apiKey": "SK-KEY-G4-3669",
+      "telemetryCount": 396
+    },
+    {
+      "id": "dev-group-5",
+      "name": "ESP32-GROUP-5-Gateway",
+      "groupSlug": "group-5",
+      "status": "online",
+      "ping": 15,
+      "lastSeen": "2026-05-30T11:59:42.626Z",
+      "apiKey": "SK-KEY-G5-2248",
+      "telemetryCount": 376
+    },
+    {
+      "id": "dev-group-6",
+      "name": "ESP32-GROUP-6-Gateway",
+      "groupSlug": "group-6",
+      "status": "online",
+      "ping": 19,
+      "lastSeen": "2026-05-30T11:59:22.602Z",
+      "apiKey": "SK-KEY-G6-8104",
+      "telemetryCount": 426
+    },
+    {
+      "id": "dev-group-7",
+      "name": "ESP32-GROUP-7-Gateway",
+      "groupSlug": "group-7",
+      "status": "online",
+      "ping": 24,
+      "lastSeen": "2026-05-30T11:59:07.571Z",
+      "apiKey": "SK-KEY-G7-7740",
+      "telemetryCount": 425
+    }
+  ],
+  "telemetryLogs": [
+    {
+      "id": "log-group-1-1780125687890-903",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:21:27.890Z",
+      "data": {
+        "soil_moisture": 75,
+        "temperature": 29.4,
+        "air_humidity": 71,
+        "soil_temperature": 24.8,
+        "rain_sensor": 3104
+      }
+    },
+    {
+      "id": "log-group-3-1780125692904-578",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:21:32.904Z",
+      "data": {
+        "servo_angle": 116,
+        "servo_current": 483,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780125697919-155",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T07:21:37.919Z",
+      "data": {
+        "line_voltage": 221.5,
+        "power_load": 2262,
+        "current_load": 9.84,
+        "power_factor": 0.93
+      }
+    },
+    {
+      "id": "log-group-5-1780125702932-957",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:21:42.932Z",
+      "data": {
+        "water_ph": 6.93,
+        "water_temp": 27.4,
+        "feeder_triggered": 0,
+        "turbidity": 17
+      }
+    },
+    {
+      "id": "log-group-5-1780125707947-711",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:21:47.947Z",
+      "data": {
+        "water_ph": 6.95,
+        "water_temp": 27.4,
+        "feeder_triggered": 0,
+        "turbidity": 17
+      }
+    },
+    {
+      "id": "log-group-1-1780125712962-896",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:21:52.962Z",
+      "data": {
+        "soil_moisture": 50,
+        "temperature": 26.5,
+        "air_humidity": 68,
+        "soil_temperature": 23.5,
+        "rain_sensor": 1841
+      }
+    },
+    {
+      "id": "log-group-1-1780125717975-18",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:21:57.975Z",
+      "data": {
+        "soil_moisture": 47,
+        "temperature": 26.2,
+        "air_humidity": 66,
+        "soil_temperature": 23.3,
+        "rain_sensor": 1644
+      }
+    },
+    {
+      "id": "log-group-5-1780125722989-892",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:22:02.989Z",
+      "data": {
+        "water_ph": 7.01,
+        "water_temp": 26.9,
+        "feeder_triggered": 0,
+        "turbidity": 11
+      }
+    },
+    {
+      "id": "log-group-1-1780125727990-393",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:22:07.990Z",
+      "data": {
+        "soil_moisture": 52,
+        "temperature": 25.3,
+        "air_humidity": 60,
+        "soil_temperature": 22.7,
+        "rain_sensor": 1322
+      }
+    },
+    {
+      "id": "log-group-4-1780125733004-469",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T07:22:13.004Z",
+      "data": {
+        "line_voltage": 219.9,
+        "power_load": 1672,
+        "current_load": 7.52,
+        "power_factor": 0.88
+      }
+    },
+    {
+      "id": "log-group-7-1780125738017-309",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T07:22:18.017Z",
+      "data": {
+        "traffic_count": 22,
+        "lux": 693,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780125743031-630",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T07:22:23.031Z",
+      "data": {
+        "line_voltage": 222.1,
+        "power_load": 1424,
+        "current_load": 6.39,
+        "power_factor": 0.86
+      }
+    },
+    {
+      "id": "log-group-6-1780125748044-118",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T07:22:28.043Z",
+      "data": {
+        "altitude": 34,
+        "battery_volt": 78,
+        "air_temp": 22,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780125753044-46",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:22:33.044Z",
+      "data": {
+        "soil_moisture": 77,
+        "temperature": 26,
+        "air_humidity": 58,
+        "soil_temperature": 22.2,
+        "rain_sensor": 1004
+      }
+    },
+    {
+      "id": "log-group-5-1780125758051-267",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:22:38.051Z",
+      "data": {
+        "water_ph": 6.99,
+        "water_temp": 25.1,
+        "feeder_triggered": 0,
+        "turbidity": 19
+      }
+    },
+    {
+      "id": "log-group-2-1780125763056-745",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:22:43.056Z",
+      "data": {
+        "co2": 734,
+        "methane": 128,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-3-1780125768069-92",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:22:48.069Z",
+      "data": {
+        "servo_angle": 66,
+        "servo_current": 408,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780125773083-578",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:22:53.083Z",
+      "data": {
+        "soil_moisture": 53,
+        "temperature": 28.5,
+        "air_humidity": 68,
+        "soil_temperature": 22.7,
+        "rain_sensor": 1301
+      }
+    },
+    {
+      "id": "log-group-5-1780125778098-526",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:22:58.098Z",
+      "data": {
+        "water_ph": 6.87,
+        "water_temp": 25.2,
+        "feeder_triggered": 0,
+        "turbidity": 17
+      }
+    },
+    {
+      "id": "log-group-2-1780125783113-673",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:23:03.113Z",
+      "data": {
+        "co2": 572,
+        "methane": 170,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-5-1780125788127-712",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:23:08.127Z",
+      "data": {
+        "water_ph": 6.79,
+        "water_temp": 25.7,
+        "feeder_triggered": 1,
+        "turbidity": 14
+      }
+    },
+    {
+      "id": "log-group-6-1780125793141-360",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T07:23:13.141Z",
+      "data": {
+        "altitude": 37,
+        "battery_volt": 76,
+        "air_temp": 24.9,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-5-1780125798157-861",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:23:18.157Z",
+      "data": {
+        "water_ph": 6.74,
+        "water_temp": 26.2,
+        "feeder_triggered": 0,
+        "turbidity": 12
+      }
+    },
+    {
+      "id": "log-group-2-1780125803171-444",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:23:23.171Z",
+      "data": {
+        "co2": 322,
+        "methane": 214,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780125808184-821",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:23:28.184Z",
+      "data": {
+        "co2": 335,
+        "methane": 222,
+        "gas_leak": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780125813199-807",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:23:33.199Z",
+      "data": {
+        "servo_angle": 47,
+        "servo_current": 371,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780125818198-788",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T07:23:38.198Z",
+      "data": {
+        "line_voltage": 222.2,
+        "power_load": 1744,
+        "current_load": 7.96,
+        "power_factor": 0.91
+      }
+    },
+    {
+      "id": "log-group-2-1780125823212-330",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:23:43.212Z",
+      "data": {
+        "co2": 535,
+        "methane": 245,
+        "gas_leak": 1
+      }
+    },
+    {
+      "id": "log-group-5-1780125828226-929",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:23:48.226Z",
+      "data": {
+        "water_ph": 6.52,
+        "water_temp": 27.4,
+        "feeder_triggered": 0,
+        "turbidity": 18
+      }
+    },
+    {
+      "id": "log-group-2-1780125833239-979",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:23:53.239Z",
+      "data": {
+        "co2": 696,
+        "methane": 239,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-5-1780125838254-512",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:23:58.254Z",
+      "data": {
+        "water_ph": 6.46,
+        "water_temp": 27.3,
+        "feeder_triggered": 0,
+        "turbidity": 20
+      }
+    },
+    {
+      "id": "log-group-5-1780125843270-700",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:24:03.270Z",
+      "data": {
+        "water_ph": 6.44,
+        "water_temp": 27.1,
+        "feeder_triggered": 0,
+        "turbidity": 20
+      }
+    },
+    {
+      "id": "log-group-6-1780125848282-61",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T07:24:08.282Z",
+      "data": {
+        "altitude": 72,
+        "battery_volt": 73,
+        "air_temp": 22.3,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780125853284-212",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:24:13.284Z",
+      "data": {
+        "co2": 638,
+        "methane": 220,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-5-1780125858295-381",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:24:18.295Z",
+      "data": {
+        "water_ph": 6.43,
+        "water_temp": 26.3,
+        "feeder_triggered": 1,
+        "turbidity": 17
+      }
+    },
+    {
+      "id": "log-group-2-1780125863295-946",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:24:23.295Z",
+      "data": {
+        "co2": 483,
+        "methane": 196,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-6-1780125868308-517",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T07:24:28.308Z",
+      "data": {
+        "altitude": 73,
+        "battery_volt": 72,
+        "air_temp": 24.1,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780125873323-476",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:24:33.323Z",
+      "data": {
+        "servo_angle": 90,
+        "servo_current": 448,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780125878335-530",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T07:24:38.335Z",
+      "data": {
+        "line_voltage": 222.7,
+        "power_load": 2278,
+        "current_load": 10.2,
+        "power_factor": 0.94
+      }
+    },
+    {
+      "id": "log-group-2-1780125883350-607",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:24:43.350Z",
+      "data": {
+        "co2": 347,
+        "methane": 150,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780125888349-365",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:24:48.349Z",
+      "data": {
+        "soil_moisture": 66,
+        "temperature": 27.5,
+        "air_humidity": 72,
+        "soil_temperature": 22.5,
+        "rain_sensor": 1224
+      }
+    },
+    {
+      "id": "log-group-6-1780125893362-894",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T07:24:53.362Z",
+      "data": {
+        "altitude": 63,
+        "battery_volt": 71,
+        "air_temp": 24.6,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-5-1780125898376-624",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:24:58.376Z",
+      "data": {
+        "water_ph": 6.54,
+        "water_temp": 25.1,
+        "feeder_triggered": 0,
+        "turbidity": 15
+      }
+    },
+    {
+      "id": "log-group-3-1780125903391-62",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:25:03.391Z",
+      "data": {
+        "servo_angle": 63,
+        "servo_current": 473,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780125908407-146",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:25:08.407Z",
+      "data": {
+        "servo_angle": 47,
+        "servo_current": 381,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780125913420-112",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:25:13.420Z",
+      "data": {
+        "soil_moisture": 49,
+        "temperature": 30,
+        "air_humidity": 62,
+        "soil_temperature": 22,
+        "rain_sensor": 1018
+      }
+    },
+    {
+      "id": "log-group-1-1780125918434-61",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:25:18.434Z",
+      "data": {
+        "soil_moisture": 55,
+        "temperature": 29.9,
+        "air_humidity": 59,
+        "soil_temperature": 22.2,
+        "rain_sensor": 1066
+      }
+    },
+    {
+      "id": "log-group-3-1780125923448-406",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:25:23.448Z",
+      "data": {
+        "servo_angle": 88,
+        "servo_current": 360,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780125928449-5",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:25:28.449Z",
+      "data": {
+        "soil_moisture": 68,
+        "temperature": 29.9,
+        "air_humidity": 57,
+        "soil_temperature": 22.6,
+        "rain_sensor": 1249
+      }
+    },
+    {
+      "id": "log-group-7-1780125933462-396",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T07:25:33.462Z",
+      "data": {
+        "traffic_count": 25,
+        "lux": 785,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780125938475-648",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:25:38.475Z",
+      "data": {
+        "co2": 492,
+        "methane": 165,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780125943488-541",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T07:25:43.488Z",
+      "data": {
+        "line_voltage": 222.3,
+        "power_load": 1663,
+        "current_load": 7.42,
+        "power_factor": 0.85
+      }
+    },
+    {
+      "id": "log-group-6-1780125948489-200",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T07:25:48.489Z",
+      "data": {
+        "altitude": 31,
+        "battery_volt": 68,
+        "air_temp": 22.8,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780125953502-714",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:25:53.502Z",
+      "data": {
+        "co2": 329,
+        "methane": 199,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780125958502-254",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T07:25:58.502Z",
+      "data": {
+        "line_voltage": 219.4,
+        "power_load": 2170,
+        "current_load": 9.54,
+        "power_factor": 0.85
+      }
+    },
+    {
+      "id": "log-group-7-1780125963515-152",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T07:26:03.515Z",
+      "data": {
+        "traffic_count": 8,
+        "lux": 940,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780125968516-310",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T07:26:08.516Z",
+      "data": {
+        "line_voltage": 217.6,
+        "power_load": 2339,
+        "current_load": 10.27,
+        "power_factor": 0.85
+      }
+    },
+    {
+      "id": "log-group-3-1780125973526-640",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:26:13.526Z",
+      "data": {
+        "servo_angle": 87,
+        "servo_current": 432,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780125978541-992",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:26:18.541Z",
+      "data": {
+        "servo_angle": 114,
+        "servo_current": 510,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780125983556-310",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:26:23.556Z",
+      "data": {
+        "co2": 669,
+        "methane": 245,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780125988570-395",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T07:26:28.570Z",
+      "data": {
+        "line_voltage": 220.6,
+        "power_load": 1987,
+        "current_load": 8.83,
+        "power_factor": 0.88
+      }
+    },
+    {
+      "id": "log-group-4-1780125993584-61",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T07:26:33.584Z",
+      "data": {
+        "line_voltage": 221.9,
+        "power_load": 1847,
+        "current_load": 8.09,
+        "power_factor": 0.89
+      }
+    },
+    {
+      "id": "log-group-2-1780125998598-638",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:26:38.598Z",
+      "data": {
+        "co2": 706,
+        "methane": 239,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780126003614-720",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:26:43.614Z",
+      "data": {
+        "co2": 660,
+        "methane": 228,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-3-1780126008627-148",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:26:48.627Z",
+      "data": {
+        "servo_angle": 48,
+        "servo_current": 496,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780126013641-376",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:26:53.641Z",
+      "data": {
+        "co2": 491,
+        "methane": 213,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-7-1780126018657-881",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T07:26:58.657Z",
+      "data": {
+        "traffic_count": 11,
+        "lux": 904,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780126023670-272",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:27:03.670Z",
+      "data": {
+        "soil_moisture": 54,
+        "temperature": 28.5,
+        "air_humidity": 57,
+        "soil_temperature": 23.6,
+        "rain_sensor": 1977
+      }
+    },
+    {
+      "id": "log-group-1-1780126028684-733",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T07:27:08.684Z",
+      "data": {
+        "soil_moisture": 48,
+        "temperature": 29,
+        "air_humidity": 57,
+        "soil_temperature": 23.4,
+        "rain_sensor": 1766
+      }
+    },
+    {
+      "id": "log-group-6-1780126033699-870",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T07:27:13.699Z",
+      "data": {
+        "altitude": 69,
+        "battery_volt": 64,
+        "air_temp": 22.1,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780126038715-72",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T07:27:18.715Z",
+      "data": {
+        "traffic_count": 24,
+        "lux": 792,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780126043728-266",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:27:23.728Z",
+      "data": {
+        "co2": 437,
+        "methane": 141,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780126048741-973",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:27:28.741Z",
+      "data": {
+        "co2": 509,
+        "methane": 136,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780126053741-897",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T07:27:33.741Z",
+      "data": {
+        "co2": 588,
+        "methane": 134,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-5-1780126058756-903",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:27:38.756Z",
+      "data": {
+        "water_ph": 6.63,
+        "water_temp": 26.7,
+        "feeder_triggered": 0,
+        "turbidity": 19
+      }
+    },
+    {
+      "id": "log-group-5-1780126063757-399",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:27:43.757Z",
+      "data": {
+        "water_ph": 6.63,
+        "water_temp": 27,
+        "feeder_triggered": 0,
+        "turbidity": 20
+      }
+    },
+    {
+      "id": "log-group-6-1780126068768-107",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T07:27:48.768Z",
+      "data": {
+        "altitude": 69,
+        "battery_volt": 62,
+        "air_temp": 24.8,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780126073782-305",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T07:27:53.782Z",
+      "data": {
+        "traffic_count": 15,
+        "lux": 536,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-7-1780126078796-895",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T07:27:58.796Z",
+      "data": {
+        "traffic_count": 20,
+        "lux": 499,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-5-1780126083803-900",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:28:03.803Z",
+      "data": {
+        "water_ph": 6.51,
+        "water_temp": 27.4,
+        "feeder_triggered": 0,
+        "turbidity": 17
+      }
+    },
+    {
+      "id": "log-group-3-1780126088809-978",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T07:28:08.809Z",
+      "data": {
+        "servo_angle": 134,
+        "servo_current": 515,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-5-1780126093822-936",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T07:28:13.822Z",
+      "data": {
+        "water_ph": 6.46,
+        "water_temp": 27.2,
+        "feeder_triggered": 0,
+        "turbidity": 13
+      }
+    },
+    {
+      "id": "log-group-7-1780126098834-458",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T07:28:18.834Z",
+      "data": {
+        "traffic_count": 16,
+        "lux": 364,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780141279191-649",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:41:19.190Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.9,
+        "rain_sensor": 3201
+      }
+    },
+    {
+      "id": "log-group-2-1780141280015-872",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:41:20.015Z",
+      "data": {
+        "co2": 538,
+        "methane": 148,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780141285017-853",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:41:25.016Z",
+      "data": {
+        "soil_moisture": 61,
+        "temperature": 27.7,
+        "air_humidity": 58,
+        "soil_temperature": 22.4,
+        "rain_sensor": 1157
+      }
+    },
+    {
+      "id": "log-group-5-1780141290019-213",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:41:30.019Z",
+      "data": {
+        "water_ph": 6.98,
+        "water_temp": 27.4,
+        "feeder_triggered": 0,
+        "turbidity": 20
+      }
+    },
+    {
+      "id": "log-group-6-1780141295024-923",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:41:35.024Z",
+      "data": {
+        "altitude": 68,
+        "battery_volt": 81,
+        "air_temp": 21.9,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141295123-636",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:41:35.123Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.5,
+        "rain_sensor": 3209
+      }
+    },
+    {
+      "id": "log-group-1-1780141300027-926",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:41:40.027Z",
+      "data": {
+        "soil_moisture": 46,
+        "temperature": 26.1,
+        "air_humidity": 57,
+        "soil_temperature": 22.1,
+        "rain_sensor": 1000
+      }
+    },
+    {
+      "id": "log-group-1-1780141305040-837",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:41:45.040Z",
+      "data": {
+        "soil_moisture": 46,
+        "temperature": 25.5,
+        "air_humidity": 59,
+        "soil_temperature": 22.1,
+        "rain_sensor": 1008
+      }
+    },
+    {
+      "id": "log-group-3-1780141310049-951",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:41:50.049Z",
+      "data": {
+        "servo_angle": 118,
+        "servo_current": 508,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780141315055-646",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:41:55.055Z",
+      "data": {
+        "co2": 553,
+        "methane": 132,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780141318595-810",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:41:58.595Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.6,
+        "rain_sensor": 3198
+      }
+    },
+    {
+      "id": "log-group-1-1780141320068-275",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:42:00.068Z",
+      "data": {
+        "soil_moisture": 66,
+        "temperature": 25.2,
+        "air_humidity": 66,
+        "soil_temperature": 22.5,
+        "rain_sensor": 1207
+      }
+    },
+    {
+      "id": "log-group-6-1780141325078-798",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:42:05.078Z",
+      "data": {
+        "altitude": 71,
+        "battery_volt": 79,
+        "air_temp": 24.2,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780141330088-187",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:42:10.088Z",
+      "data": {
+        "altitude": 70,
+        "battery_volt": 79,
+        "air_temp": 24.5,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780141335097-862",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:42:15.097Z",
+      "data": {
+        "altitude": 69,
+        "battery_volt": 79,
+        "air_temp": 24.8,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141337099-646",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:42:17.099Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.6,
+        "rain_sensor": 3184
+      }
+    },
+    {
+      "id": "log-group-2-1780141340102-202",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:42:20.102Z",
+      "data": {
+        "co2": 342,
+        "methane": 180,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-5-1780141345103-423",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:42:25.103Z",
+      "data": {
+        "water_ph": 6.94,
+        "water_temp": 25,
+        "feeder_triggered": 0,
+        "turbidity": 12
+      }
+    },
+    {
+      "id": "log-group-3-1780141350108-725",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:42:30.108Z",
+      "data": {
+        "servo_angle": 65,
+        "servo_current": 398,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780141355118-976",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:42:35.118Z",
+      "data": {
+        "traffic_count": 16,
+        "lux": 934,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141356100-333",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:42:36.100Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.5,
+        "rain_sensor": 3175
+      }
+    },
+    {
+      "id": "log-group-4-1780141360125-620",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:42:40.125Z",
+      "data": {
+        "line_voltage": 217.9,
+        "power_load": 2315,
+        "current_load": 10.21,
+        "power_factor": 0.91
+      }
+    },
+    {
+      "id": "log-group-4-1780141365138-820",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:42:45.138Z",
+      "data": {
+        "line_voltage": 217.8,
+        "power_load": 2301,
+        "current_load": 10.3,
+        "power_factor": 0.9
+      }
+    },
+    {
+      "id": "log-group-3-1780141370148-991",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:42:50.148Z",
+      "data": {
+        "servo_angle": 132,
+        "servo_current": 502,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141372020-17",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:42:52.020Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.6,
+        "rain_sensor": 3183
+      }
+    },
+    {
+      "id": "log-group-5-1780141375156-753",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:42:55.156Z",
+      "data": {
+        "water_ph": 6.77,
+        "water_temp": 25.9,
+        "feeder_triggered": 0,
+        "turbidity": 20
+      }
+    },
+    {
+      "id": "log-group-6-1780141380161-902",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:43:00.161Z",
+      "data": {
+        "altitude": 41,
+        "battery_volt": 77,
+        "air_temp": 22.1,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780141385160-547",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:43:05.160Z",
+      "data": {
+        "line_voltage": 221.4,
+        "power_load": 1917,
+        "current_load": 8.36,
+        "power_factor": 0.87
+      }
+    },
+    {
+      "id": "log-group-3-1780141390167-576",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:43:10.167Z",
+      "data": {
+        "servo_angle": 46,
+        "servo_current": 499,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141390605-519",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:43:10.605Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.3,
+        "rain_sensor": 3166
+      }
+    },
+    {
+      "id": "log-group-4-1780141395172-824",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:43:15.172Z",
+      "data": {
+        "line_voltage": 222.9,
+        "power_load": 1549,
+        "current_load": 6.95,
+        "power_factor": 0.86
+      }
+    },
+    {
+      "id": "log-group-3-1780141400179-538",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:43:20.178Z",
+      "data": {
+        "servo_angle": 63,
+        "servo_current": 468,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780141405185-138",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:43:25.185Z",
+      "data": {
+        "altitude": 30,
+        "battery_volt": 75,
+        "air_temp": 22.8,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141406516-256",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:43:26.516Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.6,
+        "rain_sensor": 3173
+      }
+    },
+    {
+      "id": "log-group-1-1780141410197-496",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:43:30.197Z",
+      "data": {
+        "soil_moisture": 61,
+        "temperature": 27.7,
+        "air_humidity": 64,
+        "soil_temperature": 24.1,
+        "rain_sensor": 2296
+      }
+    },
+    {
+      "id": "log-group-6-1780141415202-632",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:43:35.202Z",
+      "data": {
+        "altitude": 30,
+        "battery_volt": 75,
+        "air_temp": 23.8,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780141420203-772",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:43:40.203Z",
+      "data": {
+        "altitude": 30,
+        "battery_volt": 75,
+        "air_temp": 24.2,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141425104-560",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:43:45.104Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.3,
+        "rain_sensor": 3183
+      }
+    },
+    {
+      "id": "log-group-7-1780141425215-614",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:43:45.215Z",
+      "data": {
+        "traffic_count": 20,
+        "lux": 835,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-3-1780141430220-552",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:43:50.220Z",
+      "data": {
+        "servo_angle": 90,
+        "servo_current": 452,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780141435232-993",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:43:55.232Z",
+      "data": {
+        "co2": 622,
+        "methane": 151,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780141440243-749",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:44:00.243Z",
+      "data": {
+        "line_voltage": 219.6,
+        "power_load": 2138,
+        "current_load": 9.57,
+        "power_factor": 0.87
+      }
+    },
+    {
+      "id": "log-group-1-1780141443679-606",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:44:03.679Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.3,
+        "rain_sensor": 3156
+      }
+    },
+    {
+      "id": "log-group-6-1780141445257-438",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:44:05.257Z",
+      "data": {
+        "altitude": 42,
+        "battery_volt": 73,
+        "air_temp": 24.6,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780141450261-781",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:44:10.261Z",
+      "data": {
+        "traffic_count": 10,
+        "lux": 663,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780141455273-367",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:44:15.273Z",
+      "data": {
+        "line_voltage": 222.6,
+        "power_load": 2307,
+        "current_load": 10.25,
+        "power_factor": 0.89
+      }
+    },
+    {
+      "id": "log-group-1-1780141460284-749",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:44:20.284Z",
+      "data": {
+        "soil_moisture": 76,
+        "temperature": 26.1,
+        "air_humidity": 64,
+        "soil_temperature": 22,
+        "rain_sensor": 1001
+      }
+    },
+    {
+      "id": "log-group-1-1780141464863-569",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:44:24.863Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.3,
+        "rain_sensor": 3163
+      }
+    },
+    {
+      "id": "log-group-5-1780141465283-673",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:44:25.283Z",
+      "data": {
+        "water_ph": 6.49,
+        "water_temp": 25.1,
+        "feeder_triggered": 0,
+        "turbidity": 16
+      }
+    },
+    {
+      "id": "log-group-2-1780141470294-72",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:44:30.294Z",
+      "data": {
+        "co2": 495,
+        "methane": 134,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-3-1780141475296-779",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:44:35.296Z",
+      "data": {
+        "servo_angle": 117,
+        "servo_current": 384,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780141480298-689",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:44:40.298Z",
+      "data": {
+        "co2": 365,
+        "methane": 146,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780141482063-427",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:44:42.063Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.2,
+        "rain_sensor": 3151
+      }
+    },
+    {
+      "id": "log-group-6-1780141485311-375",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:44:45.311Z",
+      "data": {
+        "altitude": 67,
+        "battery_volt": 71,
+        "air_temp": 21.9,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780141490321-811",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:44:50.321Z",
+      "data": {
+        "altitude": 70,
+        "battery_volt": 71,
+        "air_temp": 22.1,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780141495336-914",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:44:55.336Z",
+      "data": {
+        "co2": 382,
+        "methane": 181,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780141500341-104",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:45:00.341Z",
+      "data": {
+        "line_voltage": 218.9,
+        "power_load": 1349,
+        "current_load": 6.18,
+        "power_factor": 0.95
+      }
+    },
+    {
+      "id": "log-group-7-1780141505352-791",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:45:05.352Z",
+      "data": {
+        "traffic_count": 18,
+        "lux": 294,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780141510363-644",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:45:10.363Z",
+      "data": {
+        "co2": 611,
+        "methane": 212,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780141515365-476",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:45:15.365Z",
+      "data": {
+        "line_voltage": 222.3,
+        "power_load": 1737,
+        "current_load": 7.75,
+        "power_factor": 0.95
+      }
+    },
+    {
+      "id": "log-group-5-1780141520377-629",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:45:20.377Z",
+      "data": {
+        "water_ph": 6.83,
+        "water_temp": 27,
+        "feeder_triggered": 0,
+        "turbidity": 19
+      }
+    },
+    {
+      "id": "log-group-3-1780141545193-730",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:45:45.192Z",
+      "data": {
+        "servo_angle": 46,
+        "servo_current": 503,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780141550195-646",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:45:50.195Z",
+      "data": {
+        "altitude": 52,
+        "battery_volt": 68,
+        "air_temp": 23.7,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780141555199-867",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:45:55.199Z",
+      "data": {
+        "traffic_count": 17,
+        "lux": 244,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-5-1780141560201-549",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:46:00.201Z",
+      "data": {
+        "water_ph": 7.03,
+        "water_temp": 26.7,
+        "feeder_triggered": 0,
+        "turbidity": 11
+      }
+    },
+    {
+      "id": "log-group-4-1780141565204-913",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:46:05.204Z",
+      "data": {
+        "line_voltage": 219.3,
+        "power_load": 1721,
+        "current_load": 7.76,
+        "power_factor": 0.88
+      }
+    },
+    {
+      "id": "log-group-6-1780141570209-485",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:46:10.209Z",
+      "data": {
+        "altitude": 39,
+        "battery_volt": 67,
+        "air_temp": 22,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780141575218-248",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:46:15.218Z",
+      "data": {
+        "co2": 429,
+        "methane": 183,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780141580227-401",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:46:20.227Z",
+      "data": {
+        "line_voltage": 222.5,
+        "power_load": 1386,
+        "current_load": 6.19,
+        "power_factor": 0.86
+      }
+    },
+    {
+      "id": "log-group-2-1780141585228-838",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:46:25.228Z",
+      "data": {
+        "co2": 589,
+        "methane": 167,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780141590235-48",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:46:30.235Z",
+      "data": {
+        "line_voltage": 222.3,
+        "power_load": 1394,
+        "current_load": 6.29,
+        "power_factor": 0.85
+      }
+    },
+    {
+      "id": "log-group-1-1780141595244-52",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:46:35.244Z",
+      "data": {
+        "soil_moisture": 67,
+        "temperature": 27.4,
+        "air_humidity": 62,
+        "soil_temperature": 22.5,
+        "rain_sensor": 1247
+      }
+    },
+    {
+      "id": "log-group-1-1780141598142-2",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:46:38.142Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.2,
+        "rain_sensor": 3143
+      }
+    },
+    {
+      "id": "log-group-5-1780141600251-25",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:46:40.250Z",
+      "data": {
+        "water_ph": 6.93,
+        "water_temp": 25,
+        "feeder_triggered": 0,
+        "turbidity": 19
+      }
+    },
+    {
+      "id": "log-group-3-1780141605609-286",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:46:45.609Z",
+      "data": {
+        "servo_angle": 84,
+        "servo_current": 499,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141610214-749",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:46:50.214Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.3,
+        "rain_sensor": 3155
+      }
+    },
+    {
+      "id": "log-group-5-1780141610618-635",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:46:50.618Z",
+      "data": {
+        "water_ph": 6.89,
+        "water_temp": 25.2,
+        "feeder_triggered": 0,
+        "turbidity": 17
+      }
+    },
+    {
+      "id": "log-group-7-1780141615628-538",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:46:55.628Z",
+      "data": {
+        "traffic_count": 25,
+        "lux": 596,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141620638-268",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:47:00.638Z",
+      "data": {
+        "soil_moisture": 47,
+        "temperature": 29.6,
+        "air_humidity": 72,
+        "soil_temperature": 22.2,
+        "rain_sensor": 1012
+      }
+    },
+    {
+      "id": "log-group-3-1780141625650-361",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:47:05.650Z",
+      "data": {
+        "servo_angle": 121,
+        "servo_current": 498,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141628709-966",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:47:08.709Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.2,
+        "rain_sensor": 3143
+      }
+    },
+    {
+      "id": "log-group-2-1780141630661-869",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:47:10.661Z",
+      "data": {
+        "co2": 383,
+        "methane": 139,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-6-1780141635668-135",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:47:15.668Z",
+      "data": {
+        "altitude": 43,
+        "battery_volt": 64,
+        "air_temp": 24.5,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780141640672-452",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:47:20.672Z",
+      "data": {
+        "line_voltage": 222,
+        "power_load": 2148,
+        "current_load": 9.57,
+        "power_factor": 0.89
+      }
+    },
+    {
+      "id": "log-group-7-1780141645676-184",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:47:25.676Z",
+      "data": {
+        "traffic_count": 10,
+        "lux": 811,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141650154-75",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:47:30.154Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.2,
+        "rain_sensor": 3141
+      }
+    },
+    {
+      "id": "log-group-6-1780141650681-930",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:47:30.681Z",
+      "data": {
+        "altitude": 52,
+        "battery_volt": 63,
+        "air_temp": 23.1,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780141655685-697",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:47:35.685Z",
+      "data": {
+        "altitude": 57,
+        "battery_volt": 63,
+        "air_temp": 22.6,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780141660688-10",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:47:40.688Z",
+      "data": {
+        "co2": 600,
+        "methane": 202,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780141665696-69",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:47:45.696Z",
+      "data": {
+        "co2": 673,
+        "methane": 204,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780141668194-826",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:47:48.194Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.3,
+        "rain_sensor": 3149
+      }
+    },
+    {
+      "id": "log-group-5-1780141670697-158",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:47:50.697Z",
+      "data": {
+        "water_ph": 6.48,
+        "water_temp": 27.3,
+        "feeder_triggered": 0,
+        "turbidity": 19
+      }
+    },
+    {
+      "id": "log-group-4-1780141675705-987",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:47:55.705Z",
+      "data": {
+        "line_voltage": 217.8,
+        "power_load": 1364,
+        "current_load": 6.15,
+        "power_factor": 0.94
+      }
+    },
+    {
+      "id": "log-group-7-1780141680709-366",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:48:00.709Z",
+      "data": {
+        "traffic_count": 18,
+        "lux": 965,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141684128-86",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:48:04.128Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.3,
+        "rain_sensor": 3136
+      }
+    },
+    {
+      "id": "log-group-3-1780141685714-699",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:48:05.714Z",
+      "data": {
+        "servo_angle": 70,
+        "servo_current": 507,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780141690717-858",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:48:10.717Z",
+      "data": {
+        "line_voltage": 219.2,
+        "power_load": 1719,
+        "current_load": 7.61,
+        "power_factor": 0.95
+      }
+    },
+    {
+      "id": "log-group-1-1780141695719-588",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:48:15.719Z",
+      "data": {
+        "soil_moisture": 63,
+        "temperature": 25.2,
+        "air_humidity": 65,
+        "soil_temperature": 25.1,
+        "rain_sensor": 3938
+      }
+    },
+    {
+      "id": "log-group-5-1780141700727-962",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:48:20.727Z",
+      "data": {
+        "water_ph": 6.43,
+        "water_temp": 25.8,
+        "feeder_triggered": 1,
+        "turbidity": 14
+      }
+    },
+    {
+      "id": "log-group-1-1780141702668-580",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:48:22.668Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.1,
+        "rain_sensor": 3145
+      }
+    },
+    {
+      "id": "log-group-5-1780141705730-364",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:48:25.730Z",
+      "data": {
+        "water_ph": 6.45,
+        "water_temp": 25.6,
+        "feeder_triggered": 0,
+        "turbidity": 11
+      }
+    },
+    {
+      "id": "log-group-7-1780141710731-772",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:48:30.731Z",
+      "data": {
+        "traffic_count": 21,
+        "lux": 960,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780141715740-51",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:48:35.740Z",
+      "data": {
+        "soil_moisture": 73,
+        "temperature": 26.4,
+        "air_humidity": 72,
+        "soil_temperature": 24.6,
+        "rain_sensor": 2775
+      }
+    },
+    {
+      "id": "log-group-1-1780141718613-692",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:48:38.613Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.2,
+        "rain_sensor": 3152
+      }
+    },
+    {
+      "id": "log-group-2-1780141720741-535",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:48:40.741Z",
+      "data": {
+        "co2": 369,
+        "methane": 218,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-3-1780141725748-901",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:48:45.748Z",
+      "data": {
+        "servo_angle": 123,
+        "servo_current": 367,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780141730753-727",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:48:50.753Z",
+      "data": {
+        "servo_angle": 99,
+        "servo_current": 481,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780141735759-334",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:48:55.759Z",
+      "data": {
+        "traffic_count": 14,
+        "lux": 859,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780141737181-929",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:48:57.181Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.3,
+        "rain_sensor": 3122
+      }
+    },
+    {
+      "id": "log-group-7-1780141740762-965",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:49:00.762Z",
+      "data": {
+        "traffic_count": 10,
+        "lux": 830,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-3-1780141745768-626",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:49:05.767Z",
+      "data": {
+        "servo_angle": 45,
+        "servo_current": 472,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141750772-665",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:49:10.772Z",
+      "data": {
+        "soil_moisture": 52,
+        "temperature": 30,
+        "air_humidity": 60,
+        "soil_temperature": 22.7,
+        "rain_sensor": 1299
+      }
+    },
+    {
+      "id": "log-group-3-1780141755777-106",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:49:15.777Z",
+      "data": {
+        "servo_angle": 79,
+        "servo_current": 422,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780141760781-867",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:49:20.781Z",
+      "data": {
+        "altitude": 38,
+        "battery_volt": 58,
+        "air_temp": 22,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780141765785-228",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:49:25.785Z",
+      "data": {
+        "line_voltage": 221.9,
+        "power_load": 1357,
+        "current_load": 6.24,
+        "power_factor": 0.86
+      }
+    },
+    {
+      "id": "log-group-5-1780141770790-673",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:49:30.790Z",
+      "data": {
+        "water_ph": 6.81,
+        "water_temp": 26.9,
+        "feeder_triggered": 1,
+        "turbidity": 15
+      }
+    },
+    {
+      "id": "log-group-3-1780141775791-486",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:49:35.791Z",
+      "data": {
+        "servo_angle": 124,
+        "servo_current": 426,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141780802-604",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:49:40.802Z",
+      "data": {
+        "soil_moisture": 73,
+        "temperature": 28.9,
+        "air_humidity": 60,
+        "soil_temperature": 22.1,
+        "rain_sensor": 1033
+      }
+    },
+    {
+      "id": "log-group-4-1780141785808-582",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:49:45.808Z",
+      "data": {
+        "line_voltage": 221.1,
+        "power_load": 1969,
+        "current_load": 8.66,
+        "power_factor": 0.85
+      }
+    },
+    {
+      "id": "log-group-4-1780141790811-715",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:49:50.811Z",
+      "data": {
+        "line_voltage": 219.7,
+        "power_load": 2145,
+        "current_load": 9.34,
+        "power_factor": 0.85
+      }
+    },
+    {
+      "id": "log-group-4-1780141795816-709",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:49:55.816Z",
+      "data": {
+        "line_voltage": 218.8,
+        "power_load": 2271,
+        "current_load": 9.89,
+        "power_factor": 0.85
+      }
+    },
+    {
+      "id": "log-group-1-1780141799742-596",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:49:59.742Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.2,
+        "rain_sensor": 3120
+      }
+    },
+    {
+      "id": "log-group-6-1780141800821-455",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:50:00.821Z",
+      "data": {
+        "altitude": 31,
+        "battery_volt": 56,
+        "air_temp": 24.5,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780141805826-514",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:50:05.826Z",
+      "data": {
+        "traffic_count": 13,
+        "lux": 370,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-7-1780141810829-284",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:50:10.829Z",
+      "data": {
+        "traffic_count": 19,
+        "lux": 341,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-4-1780141815829-172",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:50:15.829Z",
+      "data": {
+        "line_voltage": 219.2,
+        "power_load": 2152,
+        "current_load": 9.68,
+        "power_factor": 0.87
+      }
+    },
+    {
+      "id": "log-group-1-1780141818185-806",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:50:18.185Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.2,
+        "rain_sensor": 3135
+      }
+    },
+    {
+      "id": "log-group-5-1780141820843-518",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:50:20.843Z",
+      "data": {
+        "water_ph": 7.04,
+        "water_temp": 26.2,
+        "feeder_triggered": 0,
+        "turbidity": 20
+      }
+    },
+    {
+      "id": "log-group-7-1780141825844-195",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:50:25.844Z",
+      "data": {
+        "traffic_count": 25,
+        "lux": 270,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780141830844-406",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:50:30.844Z",
+      "data": {
+        "co2": 731,
+        "methane": 220,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780141835846-373",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:50:35.846Z",
+      "data": {
+        "co2": 693,
+        "methane": 229,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780141840861-599",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:50:40.861Z",
+      "data": {
+        "co2": 624,
+        "methane": 242,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-6-1780141845863-310",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:50:45.863Z",
+      "data": {
+        "altitude": 58,
+        "battery_volt": 53,
+        "air_temp": 22.5,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141850865-499",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:50:50.865Z",
+      "data": {
+        "soil_moisture": 61,
+        "temperature": 27.8,
+        "air_humidity": 58,
+        "soil_temperature": 25.1,
+        "rain_sensor": 3936
+      }
+    },
+    {
+      "id": "log-group-7-1780141855870-361",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:50:55.870Z",
+      "data": {
+        "traffic_count": 14,
+        "lux": 221,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780141860873-680",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:51:00.873Z",
+      "data": {
+        "co2": 340,
+        "methane": 238,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-6-1780141865885-456",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:51:05.885Z",
+      "data": {
+        "altitude": 69,
+        "battery_volt": 52,
+        "air_temp": 22,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780141870888-989",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:51:10.888Z",
+      "data": {
+        "co2": 376,
+        "methane": 229,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780141875738-716",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:51:15.738Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.2,
+        "rain_sensor": 3131
+      }
+    },
+    {
+      "id": "log-group-3-1780141875893-421",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:51:15.893Z",
+      "data": {
+        "servo_angle": 126,
+        "servo_current": 505,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780141880897-286",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:51:20.897Z",
+      "data": {
+        "traffic_count": 19,
+        "lux": 281,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780141885901-613",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:51:25.901Z",
+      "data": {
+        "line_voltage": 220.6,
+        "power_load": 2248,
+        "current_load": 10.05,
+        "power_factor": 0.95
+      }
+    },
+    {
+      "id": "log-group-5-1780141890909-971",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:51:30.909Z",
+      "data": {
+        "water_ph": 6.66,
+        "water_temp": 26.6,
+        "feeder_triggered": 0,
+        "turbidity": 17
+      }
+    },
+    {
+      "id": "log-group-6-1780141895916-445",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:51:35.916Z",
+      "data": {
+        "altitude": 72,
+        "battery_volt": 51,
+        "air_temp": 24.5,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141897251-937",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:51:37.251Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.4,
+        "rain_sensor": 3136
+      }
+    },
+    {
+      "id": "log-group-6-1780141900924-483",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:51:40.924Z",
+      "data": {
+        "altitude": 70,
+        "battery_volt": 51,
+        "air_temp": 24.8,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141905923-433",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:51:45.923Z",
+      "data": {
+        "soil_moisture": 73,
+        "temperature": 28.8,
+        "air_humidity": 72,
+        "soil_temperature": 22.8,
+        "rain_sensor": 1355
+      }
+    },
+    {
+      "id": "log-group-6-1780141910927-913",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:51:50.927Z",
+      "data": {
+        "altitude": 63,
+        "battery_volt": 50,
+        "air_temp": 24.8,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780141915932-257",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:51:55.932Z",
+      "data": {
+        "traffic_count": 25,
+        "lux": 490,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780141920946-322",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:52:00.946Z",
+      "data": {
+        "altitude": 59,
+        "battery_volt": 50,
+        "air_temp": 24.3,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780141977005-440",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:52:57.005Z",
+      "data": {
+        "servo_angle": 120,
+        "servo_current": 376,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780141982006-479",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:53:02.006Z",
+      "data": {
+        "line_voltage": 219,
+        "power_load": 2310,
+        "current_load": 10.28,
+        "power_factor": 0.85
+      }
+    },
+    {
+      "id": "log-group-7-1780141987013-793",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:53:07.013Z",
+      "data": {
+        "traffic_count": 13,
+        "lux": 946,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780141992017-350",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:53:12.017Z",
+      "data": {
+        "soil_moisture": 47,
+        "temperature": 29.4,
+        "air_humidity": 71,
+        "soil_temperature": 24.8,
+        "rain_sensor": 3048
+      }
+    },
+    {
+      "id": "log-group-5-1780141997023-826",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:53:17.023Z",
+      "data": {
+        "water_ph": 6.65,
+        "water_temp": 25.6,
+        "feeder_triggered": 0,
+        "turbidity": 14
+      }
+    },
+    {
+      "id": "log-group-1-1780142001271-411",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:53:21.271Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.1,
+        "rain_sensor": 3121
+      }
+    },
+    {
+      "id": "log-group-1-1780142002023-26",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:53:22.023Z",
+      "data": {
+        "soil_moisture": 53,
+        "temperature": 30.2,
+        "air_humidity": 72,
+        "soil_temperature": 25.1,
+        "rain_sensor": 3632
+      }
+    },
+    {
+      "id": "log-group-6-1780142007025-473",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:53:27.025Z",
+      "data": {
+        "altitude": 39,
+        "battery_volt": 45,
+        "air_temp": 24.8,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780142012034-382",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:53:32.034Z",
+      "data": {
+        "servo_angle": 110,
+        "servo_current": 465,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780142017040-764",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:53:37.040Z",
+      "data": {
+        "line_voltage": 222.3,
+        "power_load": 1360,
+        "current_load": 6.35,
+        "power_factor": 0.89
+      }
+    },
+    {
+      "id": "log-group-1-1780142019714-584",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:53:39.714Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.2,
+        "rain_sensor": 3139
+      }
+    },
+    {
+      "id": "log-group-6-1780142022052-226",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:53:42.052Z",
+      "data": {
+        "altitude": 49,
+        "battery_volt": 44,
+        "air_temp": 23.6,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780142027067-644",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:53:47.067Z",
+      "data": {
+        "traffic_count": 24,
+        "lux": 953,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-6-1780142032082-854",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:53:52.082Z",
+      "data": {
+        "altitude": 57,
+        "battery_volt": 44,
+        "air_temp": 22.6,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780142035623-42",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:53:55.623Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.2,
+        "rain_sensor": 3135
+      }
+    },
+    {
+      "id": "log-group-5-1780142037096-836",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:53:57.096Z",
+      "data": {
+        "water_ph": 6.93,
+        "water_temp": 27.4,
+        "feeder_triggered": 0,
+        "turbidity": 18
+      }
+    },
+    {
+      "id": "log-group-4-1780142042100-559",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:54:02.100Z",
+      "data": {
+        "line_voltage": 219.6,
+        "power_load": 1690,
+        "current_load": 7.63,
+        "power_factor": 0.93
+      }
+    },
+    {
+      "id": "log-group-6-1780142047105-242",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:54:07.105Z",
+      "data": {
+        "altitude": 67,
+        "battery_volt": 43,
+        "air_temp": 21.9,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780142052107-664",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:54:12.107Z",
+      "data": {
+        "altitude": 68,
+        "battery_volt": 43,
+        "air_temp": 22,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780142054213-951",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:54:14.213Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.5,
+        "air_humidity": 69.1,
+        "rain_sensor": 3131
+      }
+    },
+    {
+      "id": "log-group-7-1780142057111-508",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:54:17.111Z",
+      "data": {
+        "traffic_count": 16,
+        "lux": 812,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780142062117-215",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:54:22.117Z",
+      "data": {
+        "soil_moisture": 51,
+        "temperature": 25.5,
+        "air_humidity": 60,
+        "soil_temperature": 22.7,
+        "rain_sensor": 1357
+      }
+    },
+    {
+      "id": "log-group-6-1780142067117-453",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:54:27.117Z",
+      "data": {
+        "altitude": 73,
+        "battery_volt": 42,
+        "air_temp": 23,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780142072127-661",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:54:32.127Z",
+      "data": {
+        "line_voltage": 220.5,
+        "power_load": 2325,
+        "current_load": 10.21,
+        "power_factor": 0.95
+      }
+    },
+    {
+      "id": "log-group-6-1780142077142-702",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:54:37.142Z",
+      "data": {
+        "altitude": 74,
+        "battery_volt": 42,
+        "air_temp": 24,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780142077729-780",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:54:37.729Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.3,
+        "rain_sensor": 3120
+      }
+    },
+    {
+      "id": "log-group-3-1780142082154-529",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:54:42.154Z",
+      "data": {
+        "servo_angle": 98,
+        "servo_current": 475,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-5-1780142087166-208",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:54:47.166Z",
+      "data": {
+        "water_ph": 7.01,
+        "water_temp": 25.3,
+        "feeder_triggered": 0,
+        "turbidity": 12
+      }
+    },
+    {
+      "id": "log-group-7-1780142092168-171",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:54:52.168Z",
+      "data": {
+        "traffic_count": 10,
+        "lux": 559,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-7-1780142097171-338",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:54:57.171Z",
+      "data": {
+        "traffic_count": 7,
+        "lux": 522,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-6-1780142102174-508",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:55:02.174Z",
+      "data": {
+        "altitude": 61,
+        "battery_volt": 40,
+        "air_temp": 24.7,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780142107185-725",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:55:07.185Z",
+      "data": {
+        "altitude": 59,
+        "battery_volt": 40,
+        "air_temp": 24.4,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780142112197-738",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:55:12.197Z",
+      "data": {
+        "servo_angle": 108,
+        "servo_current": 495,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780142117197-534",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:55:17.197Z",
+      "data": {
+        "traffic_count": 24,
+        "lux": 383,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-6-1780142122207-416",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:55:22.207Z",
+      "data": {
+        "altitude": 48,
+        "battery_volt": 39,
+        "air_temp": 23,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780142127217-454",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:55:27.217Z",
+      "data": {
+        "traffic_count": 22,
+        "lux": 325,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-6-1780142132220-86",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:55:32.220Z",
+      "data": {
+        "altitude": 41,
+        "battery_volt": 39,
+        "air_temp": 22.2,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780142137229-247",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:55:37.228Z",
+      "data": {
+        "co2": 670,
+        "methane": 212,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780142142240-348",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:55:42.239Z",
+      "data": {
+        "soil_moisture": 72,
+        "temperature": 30,
+        "air_humidity": 57,
+        "soil_temperature": 24.4,
+        "rain_sensor": 2656
+      }
+    },
+    {
+      "id": "log-group-2-1780142147241-657",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:55:47.241Z",
+      "data": {
+        "co2": 527,
+        "methane": 232,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-7-1780142152255-923",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:55:52.255Z",
+      "data": {
+        "traffic_count": 10,
+        "lux": 233,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780142157256-117",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:55:57.256Z",
+      "data": {
+        "co2": 366,
+        "methane": 238,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780142160378-739",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:56:00.378Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.3,
+        "air_humidity": 69.3,
+        "rain_sensor": 3146
+      }
+    },
+    {
+      "id": "log-group-7-1780142162256-809",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:56:02.256Z",
+      "data": {
+        "traffic_count": 20,
+        "lux": 220,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-3-1780142167271-773",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:56:07.271Z",
+      "data": {
+        "servo_angle": 128,
+        "servo_current": 415,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780142172274-973",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:56:12.274Z",
+      "data": {
+        "line_voltage": 218.5,
+        "power_load": 2015,
+        "current_load": 9.04,
+        "power_factor": 0.85
+      }
+    },
+    {
+      "id": "log-group-6-1780142177282-113",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:56:17.282Z",
+      "data": {
+        "altitude": 30,
+        "battery_volt": 37,
+        "air_temp": 24.5,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780142182296-993",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:56:22.296Z",
+      "data": {
+        "co2": 499,
+        "methane": 229,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780142183245-72",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:56:23.245Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.4,
+        "air_humidity": 69.3,
+        "rain_sensor": 3143
+      }
+    },
+    {
+      "id": "log-group-3-1780142187306-745",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:56:27.306Z",
+      "data": {
+        "servo_angle": 73,
+        "servo_current": 495,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-4-1780142192316-663",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:56:32.316Z",
+      "data": {
+        "line_voltage": 219.2,
+        "power_load": 1383,
+        "current_load": 6.42,
+        "power_factor": 0.87
+      }
+    },
+    {
+      "id": "log-group-7-1780142197319-698",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:56:37.319Z",
+      "data": {
+        "traffic_count": 10,
+        "lux": 294,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780142198438-860",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:56:38.438Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 0,
+        "temperature": 29.3,
+        "air_humidity": 69.6,
+        "rain_sensor": 3149
+      }
+    },
+    {
+      "id": "log-group-1-1780142202325-499",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:56:42.325Z",
+      "data": {
+        "soil_moisture": 68,
+        "temperature": 25.5,
+        "air_humidity": 70,
+        "soil_temperature": 23.7,
+        "rain_sensor": 1986
+      }
+    },
+    {
+      "id": "log-group-6-1780142207338-978",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:56:47.338Z",
+      "data": {
+        "altitude": 47,
+        "battery_volt": 35,
+        "air_temp": 23.9,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780142212342-998",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:56:52.342Z",
+      "data": {
+        "servo_angle": 105,
+        "servo_current": 379,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-5-1780142217354-358",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:56:57.354Z",
+      "data": {
+        "water_ph": 6.44,
+        "water_temp": 25.2,
+        "feeder_triggered": 0,
+        "turbidity": 18
+      }
+    },
+    {
+      "id": "log-group-4-1780142222362-736",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:57:02.362Z",
+      "data": {
+        "line_voltage": 221.7,
+        "power_load": 1853,
+        "current_load": 8.24,
+        "power_factor": 0.92
+      }
+    },
+    {
+      "id": "log-group-4-1780142227373-175",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:57:07.373Z",
+      "data": {
+        "line_voltage": 220.4,
+        "power_load": 2019,
+        "current_load": 8.97,
+        "power_factor": 0.92
+      }
+    },
+    {
+      "id": "log-group-5-1780142232384-464",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:57:12.384Z",
+      "data": {
+        "water_ph": 6.54,
+        "water_temp": 25,
+        "feeder_triggered": 0,
+        "turbidity": 13
+      }
+    },
+    {
+      "id": "log-group-2-1780142237398-602",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:57:17.398Z",
+      "data": {
+        "co2": 340,
+        "methane": 129,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-3-1780142242406-25",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:57:22.406Z",
+      "data": {
+        "servo_angle": 53,
+        "servo_current": 415,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780142247412-94",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:57:27.412Z",
+      "data": {
+        "soil_moisture": 46,
+        "temperature": 29.7,
+        "air_humidity": 59,
+        "soil_temperature": 22,
+        "rain_sensor": 1006
+      }
+    },
+    {
+      "id": "log-group-1-1780142249602-920",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:57:29.602Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.12,
+        "temperature": 29.3,
+        "air_humidity": 69.2,
+        "rain_sensor": 3121
+      }
+    },
+    {
+      "id": "log-group-7-1780142252420-936",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:57:32.420Z",
+      "data": {
+        "traffic_count": 11,
+        "lux": 662,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780142257425-572",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:57:37.425Z",
+      "data": {
+        "co2": 492,
+        "methane": 133,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-7-1780142262437-392",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:57:42.437Z",
+      "data": {
+        "traffic_count": 18,
+        "lux": 735,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780142267438-701",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:57:47.438Z",
+      "data": {
+        "altitude": 73,
+        "battery_volt": 32,
+        "air_temp": 24.1,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780142267592-379",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:57:47.592Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.06,
+        "temperature": 29.3,
+        "air_humidity": 69.3,
+        "rain_sensor": 3125
+      }
+    },
+    {
+      "id": "log-group-2-1780142272441-988",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:57:52.441Z",
+      "data": {
+        "co2": 710,
+        "methane": 158,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-3-1780142277446-692",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:57:57.446Z",
+      "data": {
+        "servo_angle": 126,
+        "servo_current": 421,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780142282457-97",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:58:02.457Z",
+      "data": {
+        "servo_angle": 104,
+        "servo_current": 511,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780142282785-327",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:58:02.785Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.06,
+        "temperature": 29.3,
+        "air_humidity": 69.5,
+        "rain_sensor": 3119
+      }
+    },
+    {
+      "id": "log-group-3-1780142287471-453",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:58:07.471Z",
+      "data": {
+        "servo_angle": 76,
+        "servo_current": 459,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-3-1780142292472-90",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:58:12.472Z",
+      "data": {
+        "servo_angle": 54,
+        "servo_current": 390,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780142297480-330",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:58:17.480Z",
+      "data": {
+        "traffic_count": 7,
+        "lux": 932,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780142300174-340",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:58:20.174Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31,
+        "temperature": 29.3,
+        "air_humidity": 69.5,
+        "rain_sensor": 3142
+      }
+    },
+    {
+      "id": "log-group-4-1780142302494-570",
+      "groupSlug": "group-4",
+      "timestamp": "2026-05-30T11:58:22.494Z",
+      "data": {
+        "line_voltage": 217.8,
+        "power_load": 1603,
+        "current_load": 7.1,
+        "power_factor": 0.91
+      }
+    },
+    {
+      "id": "log-group-7-1780142307501-397",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:58:27.501Z",
+      "data": {
+        "traffic_count": 12,
+        "lux": 962,
+        "street_light": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780142312501-313",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:58:32.501Z",
+      "data": {
+        "soil_moisture": 48,
+        "temperature": 25.8,
+        "air_humidity": 62,
+        "soil_temperature": 25,
+        "rain_sensor": 3386
+      }
+    },
+    {
+      "id": "log-group-1-1780142315388-284",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:58:35.388Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31,
+        "temperature": 29.3,
+        "air_humidity": 69.6,
+        "rain_sensor": 3140
+      }
+    },
+    {
+      "id": "log-group-5-1780142317513-141",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:58:37.513Z",
+      "data": {
+        "water_ph": 7.03,
+        "water_temp": 26.5,
+        "feeder_triggered": 0,
+        "turbidity": 11
+      }
+    },
+    {
+      "id": "log-group-6-1780142322523-146",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:58:42.523Z",
+      "data": {
+        "altitude": 41,
+        "battery_volt": 29,
+        "air_temp": 22.1,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-2-1780142327536-772",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:58:47.536Z",
+      "data": {
+        "co2": 420,
+        "methane": 246,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-5-1780142332553-94",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:58:52.553Z",
+      "data": {
+        "water_ph": 7.03,
+        "water_temp": 25.6,
+        "feeder_triggered": 1,
+        "turbidity": 15
+      }
+    },
+    {
+      "id": "log-group-1-1780142333228-635",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:58:53.228Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 30.94,
+        "temperature": 29.3,
+        "air_humidity": 69.4,
+        "rain_sensor": 3131
+      }
+    },
+    {
+      "id": "log-group-6-1780142337563-458",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:58:57.563Z",
+      "data": {
+        "altitude": 32,
+        "battery_volt": 29,
+        "air_temp": 22.1,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-6-1780142342569-192",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:59:02.569Z",
+      "data": {
+        "altitude": 31,
+        "battery_volt": 28,
+        "air_temp": 22.3,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-7-1780142347571-630",
+      "groupSlug": "group-7",
+      "timestamp": "2026-05-30T11:59:07.571Z",
+      "data": {
+        "traffic_count": 8,
+        "lux": 934,
+        "street_light": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780142351121-744",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:59:11.121Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 30.94,
+        "temperature": 29.3,
+        "air_humidity": 69.6,
+        "rain_sensor": 3105
+      }
+    },
+    {
+      "id": "log-group-5-1780142352583-293",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:59:12.583Z",
+      "data": {
+        "water_ph": 6.94,
+        "water_temp": 25,
+        "feeder_triggered": 0,
+        "turbidity": 20
+      }
+    },
+    {
+      "id": "log-group-1-1780142357597-99",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:59:17.597Z",
+      "data": {
+        "soil_moisture": 57,
+        "temperature": 28.3,
+        "air_humidity": 66,
+        "soil_temperature": 23.9,
+        "rain_sensor": 2080
+      }
+    },
+    {
+      "id": "log-group-6-1780142362602-769",
+      "groupSlug": "group-6",
+      "timestamp": "2026-05-30T11:59:22.602Z",
+      "data": {
+        "altitude": 31,
+        "battery_volt": 27,
+        "air_temp": 24.2,
+        "gps_lock": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780142366320-74",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:59:26.320Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.12,
+        "temperature": 29.3,
+        "air_humidity": 69.6,
+        "rain_sensor": 3135
+      }
+    },
+    {
+      "id": "log-group-1-1780142367612-438",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:59:27.612Z",
+      "data": {
+        "soil_moisture": 47,
+        "temperature": 29.2,
+        "air_humidity": 71,
+        "soil_temperature": 23.2,
+        "rain_sensor": 1660
+      }
+    },
+    {
+      "id": "log-group-2-1780142372615-422",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:59:32.615Z",
+      "data": {
+        "co2": 541,
+        "methane": 158,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-2-1780142377617-680",
+      "groupSlug": "group-2",
+      "timestamp": "2026-05-30T11:59:37.617Z",
+      "data": {
+        "co2": 463,
+        "methane": 147,
+        "gas_leak": 0
+      }
+    },
+    {
+      "id": "log-group-1-1780142381521-518",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T11:59:41.521Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.25,
+        "temperature": 29.3,
+        "air_humidity": 69.5,
+        "rain_sensor": 3125
+      }
+    },
+    {
+      "id": "log-group-5-1780142382626-145",
+      "groupSlug": "group-5",
+      "timestamp": "2026-05-30T11:59:42.626Z",
+      "data": {
+        "water_ph": 6.77,
+        "water_temp": 26,
+        "feeder_triggered": 0,
+        "turbidity": 12
+      }
+    },
+    {
+      "id": "log-group-3-1780142387632-525",
+      "groupSlug": "group-3",
+      "timestamp": "2026-05-30T11:59:47.632Z",
+      "data": {
+        "servo_angle": 79,
+        "servo_current": 415,
+        "calibration_state": 1
+      }
+    },
+    {
+      "id": "log-group-1-1780143743012-983",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:22:23.012Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70,
+        "rain_sensor": 3150
+      }
+    },
+    {
+      "id": "log-group-1-1780143758220-150",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:22:38.220Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70,
+        "rain_sensor": 3147
+      }
+    },
+    {
+      "id": "log-group-1-1780143782186-486",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:23:02.186Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70,
+        "rain_sensor": 3147
+      }
+    },
+    {
+      "id": "log-group-1-1780143793596-653",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:23:13.596Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70,
+        "rain_sensor": 3151
+      }
+    },
+    {
+      "id": "log-group-1-1780143813701-372",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:23:33.701Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.2,
+        "rain_sensor": 3150
+      }
+    },
+    {
+      "id": "log-group-1-1780143831749-984",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:23:51.749Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.2,
+        "air_humidity": 70.2,
+        "rain_sensor": 3155
+      }
+    },
+    {
+      "id": "log-group-1-1780143849703-307",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:24:09.703Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.2,
+        "air_humidity": 70.1,
+        "rain_sensor": 3187
+      }
+    },
+    {
+      "id": "log-group-1-1780143867876-160",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:24:27.876Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.2,
+        "rain_sensor": 3184
+      }
+    },
+    {
+      "id": "log-group-1-1780143885704-210",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:24:45.704Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.1,
+        "rain_sensor": 3194
+      }
+    },
+    {
+      "id": "log-group-1-1780143900949-197",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:25:00.949Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.1,
+        "rain_sensor": 3201
+      }
+    },
+    {
+      "id": "log-group-1-1780143916156-879",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:25:16.156Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.2,
+        "rain_sensor": 3200
+      }
+    },
+    {
+      "id": "log-group-1-1780143934253-640",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:25:34.253Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.2,
+        "rain_sensor": 3200
+      }
+    },
+    {
+      "id": "log-group-1-1780143952207-30",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:25:52.207Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.2,
+        "rain_sensor": 3209
+      }
+    },
+    {
+      "id": "log-group-1-1780143967399-484",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:26:07.399Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.25,
+        "temperature": 29.1,
+        "air_humidity": 70.2,
+        "rain_sensor": 3211
+      }
+    },
+    {
+      "id": "log-group-1-1780143985227-362",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:26:25.227Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.2,
+        "rain_sensor": 3200
+      }
+    },
+    {
+      "id": "log-group-1-1780144003302-747",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:26:43.302Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.25,
+        "temperature": 29.1,
+        "air_humidity": 70.2,
+        "rain_sensor": 3200
+      }
+    },
+    {
+      "id": "log-group-1-1780144021270-336",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:27:01.270Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.25,
+        "temperature": 29.1,
+        "air_humidity": 70.2,
+        "rain_sensor": 3200
+      }
+    },
+    {
+      "id": "log-group-1-1780144082225-261",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:28:02.225Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.5,
+        "rain_sensor": 3184
+      }
+    },
+    {
+      "id": "log-group-1-1780144100222-645",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:28:20.222Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.5,
+        "rain_sensor": 3202
+      }
+    },
+    {
+      "id": "log-group-1-1780144115419-28",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:28:35.419Z",
+      "data": {
+        "soil_moisture": 0,
+        "soil_temperature": 31.19,
+        "temperature": 29.1,
+        "air_humidity": 70.6,
+        "rain_sensor": 3197
+      }
+    },
+    {
+      "id": "log-group-1-1780144193763-147",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:29:53.763Z",
+      "data": {
+        "soil_moisture": 12,
+        "soil_temperature": 0,
+        "temperature": 28.8,
+        "air_humidity": 67.3,
+        "rain_sensor": 3633
+      }
+    },
+    {
+      "id": "log-group-1-1780144211530-979",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:30:11.530Z",
+      "data": {
+        "soil_moisture": 13,
+        "soil_temperature": 31.19,
+        "temperature": 28.9,
+        "air_humidity": 71,
+        "rain_sensor": 3641
+      }
+    },
+    {
+      "id": "log-group-1-1780144229581-182",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:30:29.581Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 31.19,
+        "temperature": 28.9,
+        "air_humidity": 71.2,
+        "rain_sensor": 3683
+      }
+    },
+    {
+      "id": "log-group-1-1780144247556-474",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:30:47.556Z",
+      "data": {
+        "soil_moisture": 14,
+        "soil_temperature": 31.25,
+        "temperature": 28.9,
+        "air_humidity": 71,
+        "rain_sensor": 3683
+      }
+    },
+    {
+      "id": "log-group-1-1780144265568-729",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:31:05.568Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 31.19,
+        "temperature": 29,
+        "air_humidity": 70.8,
+        "rain_sensor": 3632
+      }
+    },
+    {
+      "id": "log-group-1-1780144280758-595",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:31:20.758Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 31.25,
+        "temperature": 28.9,
+        "air_humidity": 70.6,
+        "rain_sensor": 3611
+      }
+    },
+    {
+      "id": "log-group-1-1780144295955-128",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:31:35.955Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 31.19,
+        "temperature": 28.9,
+        "air_humidity": 70.6,
+        "rain_sensor": 3605
+      }
+    },
+    {
+      "id": "log-group-1-1780144314052-676",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:31:54.052Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 31.25,
+        "temperature": 29,
+        "air_humidity": 70.6,
+        "rain_sensor": 3643
+      }
+    },
+    {
+      "id": "log-group-1-1780144329273-597",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:32:09.273Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 31.25,
+        "temperature": 28.9,
+        "air_humidity": 70.8,
+        "rain_sensor": 3634
+      }
+    },
+    {
+      "id": "log-group-1-1780144350062-328",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:32:30.062Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 31.25,
+        "temperature": 28.9,
+        "air_humidity": 70.7,
+        "rain_sensor": 3626
+      }
+    },
+    {
+      "id": "log-group-1-1780144368049-176",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:32:48.049Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 31.25,
+        "temperature": 28.9,
+        "air_humidity": 70.7,
+        "rain_sensor": 3633
+      }
+    },
+    {
+      "id": "log-group-1-1780144388550-517",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:33:08.550Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 31.25,
+        "temperature": 29,
+        "air_humidity": 70.6,
+        "rain_sensor": 3669
+      }
+    },
+    {
+      "id": "log-group-1-1780144406064-464",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:33:26.064Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 31.25,
+        "temperature": 29,
+        "air_humidity": 70.6,
+        "rain_sensor": 3615
+      }
+    },
+    {
+      "id": "log-group-1-1780144424061-850",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:33:44.061Z",
+      "data": {
+        "soil_moisture": 18,
+        "soil_temperature": 31.25,
+        "temperature": 28.9,
+        "air_humidity": 70.7,
+        "rain_sensor": 3613
+      }
+    },
+    {
+      "id": "log-group-1-1780144439257-905",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:33:59.257Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 31.19,
+        "temperature": 28.9,
+        "air_humidity": 70.7,
+        "rain_sensor": 3650
+      }
+    },
+    {
+      "id": "log-group-1-1780144454477-130",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:34:14.477Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 31.19,
+        "temperature": 29,
+        "air_humidity": 70.6,
+        "rain_sensor": 3603
+      }
+    },
+    {
+      "id": "log-group-1-1780144753689-420",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:39:13.689Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 30.88,
+        "temperature": 28.9,
+        "air_humidity": 70.9,
+        "rain_sensor": 3646
+      }
+    },
+    {
+      "id": "log-group-1-1780144768890-63",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:39:28.890Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 30.88,
+        "temperature": 28.9,
+        "air_humidity": 71,
+        "rain_sensor": 3635
+      }
+    },
+    {
+      "id": "log-group-1-1780144784576-109",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:39:44.576Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 30.88,
+        "temperature": 28.9,
+        "air_humidity": 71,
+        "rain_sensor": 3651
+      }
+    },
+    {
+      "id": "log-group-1-1780144799782-617",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:39:59.782Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 30.88,
+        "temperature": 28.9,
+        "air_humidity": 71,
+        "rain_sensor": 3599
+      }
+    },
+    {
+      "id": "log-group-1-1780144814998-228",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:40:14.997Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 30.81,
+        "temperature": 28.9,
+        "air_humidity": 71.1,
+        "rain_sensor": 3622
+      }
+    },
+    {
+      "id": "log-group-1-1780144850244-557",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:40:50.244Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 30.81,
+        "temperature": 28.9,
+        "air_humidity": 71,
+        "rain_sensor": 3625
+      }
+    },
+    {
+      "id": "log-group-1-1780144859695-833",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:40:59.695Z",
+      "data": {
+        "soil_moisture": 18,
+        "soil_temperature": 30.81,
+        "temperature": 28.9,
+        "air_humidity": 71.2,
+        "rain_sensor": 3629
+      }
+    },
+    {
+      "id": "log-group-1-1780144870878-148",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:41:10.878Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 30.75,
+        "temperature": 28.9,
+        "air_humidity": 71,
+        "rain_sensor": 3599
+      }
+    },
+    {
+      "id": "log-group-1-1780144888708-519",
+      "groupSlug": "group-1",
+      "timestamp": "2026-05-30T12:41:28.708Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 30.75,
+        "temperature": 28.9,
+        "air_humidity": 71,
+        "rain_sensor": 3638
+      }
+    },
+    {
+      "id": "log-group-1-1781438663214-875",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:04:23.214Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.4,
+        "rain_sensor": 3426
+      }
+    },
+    {
+      "id": "log-group-1-1781438679152-249",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:04:39.152Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.2,
+        "rain_sensor": 3455
+      }
+    },
+    {
+      "id": "log-group-1-1781438694643-52",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:04:54.643Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.2,
+        "rain_sensor": 3471
+      }
+    },
+    {
+      "id": "log-group-1-1781438709926-907",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:05:09.926Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.4,
+        "rain_sensor": 3482
+      }
+    },
+    {
+      "id": "log-group-1-1781438725244-921",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:05:25.244Z",
+      "data": {
+        "soil_moisture": 13,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.9,
+        "rain_sensor": 3498
+      }
+    },
+    {
+      "id": "log-group-1-1781438740444-895",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:05:40.444Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.6,
+        "rain_sensor": 3519
+      }
+    },
+    {
+      "id": "log-group-1-1781438752524-710",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:05:52.524Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.9,
+        "rain_sensor": 3440
+      }
+    },
+    {
+      "id": "log-group-1-1781438767851-569",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:06:07.851Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.9,
+        "rain_sensor": 3490
+      }
+    },
+    {
+      "id": "log-group-1-1781438783471-155",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:06:23.471Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.9,
+        "rain_sensor": 3415
+      }
+    },
+    {
+      "id": "log-group-1-1781438798815-172",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:06:38.815Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.9,
+        "rain_sensor": 3487
+      }
+    },
+    {
+      "id": "log-group-1-1781438814190-777",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:06:54.190Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.4,
+        "rain_sensor": 3474
+      }
+    },
+    {
+      "id": "log-group-1-1781438829545-646",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:07:09.545Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.4,
+        "rain_sensor": 3475
+      }
+    },
+    {
+      "id": "log-group-1-1781438844801-208",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:07:24.801Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.4,
+        "rain_sensor": 3549
+      }
+    },
+    {
+      "id": "log-group-1-1781438860480-966",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:07:40.480Z",
+      "data": {
+        "soil_moisture": 17,
+        "soil_temperature": 29.44,
+        "temperature": 28.6,
+        "air_humidity": 86.9,
+        "rain_sensor": 3455
+      }
+    },
+    {
+      "id": "log-group-1-1781438875673-529",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:07:55.673Z",
+      "data": {
+        "soil_moisture": 15,
+        "soil_temperature": 29.44,
+        "temperature": 28.6,
+        "air_humidity": 86.9,
+        "rain_sensor": 3508
+      }
+    },
+    {
+      "id": "log-group-1-1781438890978-631",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:08:10.978Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 29.5,
+        "temperature": 28.5,
+        "air_humidity": 86.6,
+        "rain_sensor": 3482
+      }
+    },
+    {
+      "id": "log-group-1-1781438906175-619",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:08:26.175Z",
+      "data": {
+        "soil_moisture": 16,
+        "soil_temperature": 29.44,
+        "temperature": 28.5,
+        "air_humidity": 86.9,
+        "rain_sensor": 3491
+      }
+    },
+    {
+      "id": "log-group-1-1781438921492-150",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:08:41.492Z",
+      "data": {
+        "soil_moisture": 18,
+        "soil_temperature": 29.44,
+        "temperature": 28.6,
+        "air_humidity": 86.9,
+        "rain_sensor": 3470
+      }
+    },
+    {
+      "id": "log-group-1-1781438936699-603",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:08:56.699Z",
+      "data": {
+        "soil_moisture": 17,
+        "soil_temperature": 29.44,
+        "temperature": 28.6,
+        "air_humidity": 87.4,
+        "rain_sensor": 3446
+      }
+    },
+    {
+      "id": "log-group-1-1781438952266-116",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:09:12.266Z",
+      "data": {
+        "soil_moisture": 17,
+        "soil_temperature": 29.44,
+        "temperature": 28.6,
+        "air_humidity": 87.1,
+        "rain_sensor": 3468
+      }
+    },
+    {
+      "id": "log-group-1-1781438968034-684",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:09:28.034Z",
+      "data": {
+        "soil_moisture": 18,
+        "soil_temperature": 29.5,
+        "temperature": 28.5,
+        "air_humidity": 87.1,
+        "rain_sensor": 3440
+      }
+    },
+    {
+      "id": "log-group-1-1781438983795-630",
+      "groupSlug": "group-1",
+      "timestamp": "2026-06-14T12:09:43.795Z",
+      "data": {
+        "soil_moisture": 18,
+        "soil_temperature": 29.5,
+        "temperature": 28.6,
+        "air_humidity": 87.4,
+        "rain_sensor": 3451
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Sistem Komputer Academic Technology Platform",
+  "description": "Full-stack cloud-native monitoring, showcase, and management showcase platform for IoT, automation, and AI projects of Computer Systems Engineering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
